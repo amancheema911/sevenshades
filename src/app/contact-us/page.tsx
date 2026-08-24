@@ -94,8 +94,8 @@ export default function ContactUsPage() {
                   <div>
                     <strong className="block text-gray-800">Phone Number:</strong>
                     <div className="flex flex-wrap gap-2">
-                      <Link href={phoneHref} className="text-md hover:text-indigo-800">{phone},</Link>
-                      <Link href={secondaryPhoneHref} className="text-md hover:text-indigo-800">{secondaryPhone}</Link>
+                      <Link href={phoneHref} className="text-md hover:text-[var(--brand-color)]">{phone},</Link>
+                      <Link href={secondaryPhoneHref} className="text-md hover:text-[var(--brand-color)]">{secondaryPhone}</Link>
                     </div>
                   </div>
                 </li>
@@ -109,7 +109,7 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <strong className="block text-gray-800">Email Address:</strong>
-                    <Link href={emailHref} className="text-md hover:text-indigo-800">{email}</Link>
+                    <Link href={emailHref} className="text-md hover:text-[var(--brand-color)]">{email}</Link>
                   </div>
                 </li>
 
