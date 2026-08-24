@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { contactInfo } from "@/lib/config";
 import Heading from "@/components/Heading";
 import FlooringQuoteForm from "@/components/FlooringQuoteForm";
-import { BASE_URL } from "@/lib/config";
+import { BASE_URL, contactInfo } from "@/lib/config";
 
-const { phone, address, email, hours, weekends, DEFAULT_IMAGE } = contactInfo;
+const { phone, secondaryPhone, address, email, hours, weekends, DEFAULT_IMAGE } = contactInfo;
 const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`;
+const secondaryPhoneHref = `tel:${secondaryPhone.replace(/[^+\d]/g, "")}`;
 const emailHref = `mailto:${email}`;
 
 export const metadata: Metadata = {
@@ -93,7 +93,10 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <strong className="block text-gray-800">Phone Number:</strong>
-                    <Link href={phoneHref} className="text-md hover:text-indigo-800">{phone}</Link>
+                    <div className="flex flex-wrap gap-2">
+                      <Link href={phoneHref} className="text-md hover:text-indigo-800">{phone},</Link>
+                      <Link href={secondaryPhoneHref} className="text-md hover:text-indigo-800">{secondaryPhone}</Link>
+                    </div>
                   </div>
                 </li>
 

@@ -4,8 +4,9 @@ import type { ReactNode } from "react";
 import { contactInfo, socialLinks } from "@/lib/config";
 import CtaActions from "./CtaActions";
 
-const { phone, address, email, logo } = contactInfo;
+const { phone, secondaryPhone, address, email, logo } = contactInfo;
 const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`;
+const secondaryPhoneHref = `tel:${secondaryPhone.replace(/[^+\d]/g, "")}`;
 const emailHref = `mailto:${email}`;
 
 const QUICK_LINKS = [
@@ -139,10 +140,17 @@ export default function Footer() {
             <h2 className="text-base font-semibold text-white">Contact Us</h2>
             <ul className="mt-5 flex flex-col gap-4">
               <li>
-                <a href={phoneHref} className="flex min-w-0 items-start gap-3 text-[0.92rem] text-white/55 transition-colors hover:text-white">
-                  <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white/80"><PhoneIcon /></span>
-                  <span className="min-w-0 flex-1 break-words pt-1.5">{phone}</span>
-                </a>
+                <div className="flex items-center gap-3">
+                    <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white/80"><PhoneIcon /></span>
+                    <div className="flex flex-wrap gap-2">
+                      <a href={phoneHref} className="flex items-start text-[0.92rem] text-white/55 transition-colors hover:text-white">
+                        <span className="flex-1 break-words">{phone},</span>    
+                      </a>
+                      <a href={secondaryPhoneHref} className="flex items-start text-[0.92rem] text-white/55 transition-colors hover:text-white">
+                        <span className="flex-1 break-words">{secondaryPhone} </span>    
+                      </a>
+                    </div>
+                </div>
               </li>
               <li>
                 <a href={emailHref} className="flex min-w-0 items-start gap-3 text-[0.92rem] text-white/55 transition-colors hover:text-white">
