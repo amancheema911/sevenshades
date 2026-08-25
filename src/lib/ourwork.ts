@@ -37,9 +37,8 @@ export const ourWorkCategories: OurWorkCategory[] = [
 
 /** Featured project IDs shown on the homepage Our Work section */
 export const featuredOurWorkIds = [
-  "garage-showroom",
+  "rubber-surfacing",
   "stone-entry",
-  "solid-epoxy-showroom",
   "metallic-lounge",
   "residential-living"
 ];
