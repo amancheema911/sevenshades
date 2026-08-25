@@ -45,7 +45,7 @@ export default function Home() {
       <HeroBanner />
 
       {/* Floor Services Section */}
-      <FloorServices />
+      <FloorServices exclude={["residential", "commercial"]} />
 
       {/* Reviews Section */}
       <ReviewsBar />

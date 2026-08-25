@@ -2,7 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/services";
 
-export default function FloorServices() {
+type FloorServicesProps = {
+  /** Service IDs to hide from the grid */
+  exclude?: string[];
+};
+
+export default function FloorServices({ exclude = [] }: FloorServicesProps) {
+  const visibleServices = services.filter(
+    (service) => !exclude.includes(service.id),
+  );
+
   return (
     <section className="relative bg-[var(--black)] py-6 sm:py-8" aria-labelledby="floor-services-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +32,7 @@ export default function FloorServices() {
 
           <div className="lg:col-span-9">
             <ul className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-5">
-              {services.slice(0, 5).map((service) => (
+              {visibleServices.map((service) => (
                 <li key={service.id} className="min-w-0">
                   <Link
                     href={service.href}
