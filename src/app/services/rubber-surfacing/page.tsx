@@ -37,10 +37,10 @@ export const metadata: Metadata = {
 };
 
 const specs = [
-  { label: "Best for", value: "Gyms · Play · Rec spaces" },
-  { label: "Finish options", value: "Tiles · Rolls · Poured" },
+  { label: "Best for", value: "Pool Deck, Balcony, Patio, Deck" },
+  { label: "Finish options", value: "Poured, Designs, Borders" },
   { label: "Typical install", value: "1–3 days" },
-  { label: "Return to use", value: "Often same day–48 hrs" },
+  { label: "Return to use", value: "24-48 hrs" },
 ];
 
 const benefits = [
@@ -98,29 +98,29 @@ const finishes = [
     id: "tiles",
     name: "Rubber Tiles",
     detail: "Interlocking tiles for fast install, modular replacement, and flexible layouts in gyms and play rooms.",
-    image: "/images/services/service-garage.webp",
+    image: "/images/services/rubber-surfacing-1.2.jpeg",
   },
   {
     id: "rolls",
     name: "Rubber Rolls",
     detail: "Continuous rolled rubber for cleaner sightlines and fewer seams in training floors and recreational interiors.",
-    image: "/images/services/service-commercial.webp",
+    image: "/images/services/rubber-surfacing.jpeg",
   },
   {
     id: "poured",
     name: "Poured Systems",
     detail: "Seamless poured rubber for outdoor play zones and custom shapes that need continuous coverage and strong drainage performance.",
-    image: "/images/services/service-industrial.webp",
+    image: "/images/services/rubber-surfacing-1.1.jpeg",
   },
 ];
 
 const faqs = serviceFaqs["rubber-surfacing"];
 
 const idealFor = [
+  "Pool decks & patios",
+  "Balconies & outdoor decks",
   "Home & commercial gyms",
   "Playrooms & daycare spaces",
-  "Recreational interiors",
-  "Outdoor play surfaces",
 ];
 
 const related = services.filter((s) => s.id !== "rubber-surfacing").slice(0, 3);
@@ -218,7 +218,7 @@ export default function RubberSurfacingPage() {
                 tag="h2"
                 size="section"
                 tone="dark"
-                eyebrow="THE SYSTEM"
+                eyebrow="SYSTEM"
                 title={<>More Than Soft. <span className="text-[var(--brand-color)]">A Real Activity Floor.</span></>}
                 description={
                   <>
@@ -247,7 +247,7 @@ export default function RubberSurfacingPage() {
             <div className="relative order-1 lg:order-2 lg:col-span-7">
               <div className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] sm:rounded-[2.1rem]">
                 <Image
-                  src="/images/services/rubber-surfacing.webp"
+                  src="/images/services/rubber-surfacing.jpeg"
                   alt="Rubber surfacing for recreation and activity spaces"
                   width={800}
                   height={800}
@@ -259,7 +259,7 @@ export default function RubberSurfacingPage() {
               <div className="absolute -bottom-5 -left-3 hidden w-[46%] overflow-hidden rounded-[1.35rem] shadow-xl sm:block lg:-left-8 lg:-bottom-7">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/services/rubber-surfacing-working-man.webp"
+                    src="/images/services/rubber-surfacing-1.1.jpeg"
                     alt="Rubber flooring detail for gym and play spaces"
                     width={400}
                     height={400}

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 const specs = [
-  { label: "Best for", value: "Garages · Showrooms · Clean spaces" },
+  { label: "Best for", value: "Commercial Floors, Warehouses" },
   { label: "Finish options", value: "Gloss · Satin · Light texture" },
   { label: "Typical install", value: "2–3 days" },
   { label: "Return to use", value: "Usually 48–72 hours" },
@@ -117,10 +117,10 @@ const finishes = [
 const faqs = serviceFaqs["solid-epoxy"];
 
 const idealFor = [
-  "Residential & collector garages",
+  "Commercial floors & warehouses",
   "Showrooms & display bays",
-  "Clean workshops",
-  "Basements & modern interiors",
+  "Retail & office interiors",
+  "Clean workshops & basements",
 ];
 
 const related = services.filter((s) => s.id !== "solid-epoxy").slice(0, 3);

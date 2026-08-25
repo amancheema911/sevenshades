@@ -19,10 +19,10 @@ const QUICK_LINKS = [
 
 const SERVICES = [
   { href: "/services/garage-floors", label: "Garage Floors" },
-  { href: "/services/commercial", label: "Commercial Flooring" },
-  { href: "/services/industrial", label: "Industrial Flooring" },
   { href: "/services/metallic-epoxy", label: "Metallic Epoxy" },
-  { href: "/services/flake-flooring", label: "Flake Flooring" },
+  { href: "/services/solid-epoxy", label: "Solid Epoxy" },
+  { href: "/services/stone-epoxy", label: "Stone Epoxy" },
+  { href: "/services/rubber-surfacing", label: "Rubber Surfacing" },
 ];
 
 const SUPPORT = [

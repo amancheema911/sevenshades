@@ -118,10 +118,11 @@ const finishes = [
 const faqs = serviceFaqs.commercial;
 
 const idealFor = [
-  "Retail & boutiques",
-  "Offices & lobbies",
-  "Restaurants & cafés",
-  "Showrooms & clinics",
+  "Wherehouse Floors",
+  "Commercial kitchen",
+  "Auto Repair Workshops",
+  "Showrooms",
+  "HealthCare & Laboratories",
 ];
 
 const related = services.filter((s) => s.id !== "commercial").slice(0, 3);

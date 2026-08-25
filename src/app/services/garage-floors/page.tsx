@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button";
 import { services } from "@/lib/services";
 import Heading from "@/components/Heading";
 import FaqAccordion from "@/components/faq-accordion";
+import FlakeColorOptions from "@/components/FlakeColorOptions";
 import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
 
 const specs = [
   { label: "Best for", value: "Residential & collector garages" },
-  { label: "Finish options", value: "Gloss · Satin · Full flake" },
-  { label: "Typical install", value: "2–3 days" },
+  { label: "Finish options", value: "Partial Flake and Solid Color" },
+  { label: "Typical install", value: "1-2 Days" },
   { label: "Return to vehicles", value: "Usually 48–72 hours" },
 ];
 
@@ -118,10 +119,10 @@ const finishes = [
 const faqs = serviceFaqs["garage-floors"];
 
 const idealFor = [
-  "Residential garages",
-  "Collector & display bays",
-  "Home workshops",
-  "Basements & gyms",
+  "Residential & collector garages",
+  "Luxury & classic car bays",
+  "Multi-car family garages",
+  "Home workshops & storage bays",
 ];
 
 const related = services.filter((s) => s.id !== "garage-floors").slice(0, 3);
@@ -182,7 +183,7 @@ export default function GarageFloorsPage() {
         asideContent={
           <div className="w-full max-w-[240px] rounded-[1.35rem] border border-white/15 bg-white/5 p-5 backdrop-blur-md">
             <ul className="w-full max-w-[240px] space-y-3.5">
-              {["Hot-tire resistant", "UV-stable clear", "2–3 day install"].map(
+              {["Hot-tire resistant", "UV-stable clear", "1-2 Days install"].map(
                 (item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm font-medium text-white/85">
                     <span className="inline-flex size-6 items-center justify-center rounded-full bg-[var(--brand-color)]/20 text-[var(--brand-color)]"><CheckIcon /></span>
@@ -276,6 +277,9 @@ export default function GarageFloorsPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Flake color System ── */}
+      <FlakeColorOptions />
 
       {/* ── Benefits ── */}
       <section className="relative overflow-hidden bg-[var(--black)] py-14 sm:py-16">
@@ -373,7 +377,7 @@ export default function GarageFloorsPage() {
         </div>
       </section>
 
-      {/* ── Process ── */}
+      {/* ── Installation Process ── */}
       <section className="relative overflow-hidden bg-gray-50 py-14 sm:py-16">
         <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-[var(--brand-color)]/12" />
         <div className="pointer-events-none absolute -bottom-20 left-0 h-56 w-56 rounded-full bg-black/20" />
@@ -401,7 +405,7 @@ export default function GarageFloorsPage() {
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-black/8 pt-6">
                 <div>
                   <div>Typical install</div>
-                  <div className="text-2xl font-bold tracking-tight text-[#0B1120]">2–3 days</div>
+                  <div className="text-2xl font-bold tracking-tight text-[#0B1120]">1-2 Days</div>
                 </div>
                 <span className="hidden h-10 w-px bg-black/10 sm:block" aria-hidden="true" />
                 <div>

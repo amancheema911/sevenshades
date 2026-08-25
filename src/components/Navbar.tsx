@@ -2,18 +2,33 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Button from "@/components/ui/Button";
 import { BASE_URL, contactInfo } from "@/lib/config";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About Us" },
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "Services", hasDropdown: true },
   { href: "/our-work", label: "Our Work" },
   { href: "/blog", label: "Blog" },
   { href: "/contact-us", label: "Contact Us" },
-];
+] as const;
+
+const SERVICE_LINKS = [
+  { href: "/services/garage-floors", label: "Garage Floors" },
+  { href: "/services/commercial", label: "Commercial" },
+  { href: "/services/residential", label: "Residential" },
+  { href: "/services/metallic-epoxy", label: "Metallic Epoxy" },
+  { href: "/services/solid-epoxy", label: "Solid Epoxy" },
+  { href: "/services/stone-epoxy", label: "Stone Epoxy" },
+  { href: "/services/rubber-surfacing", label: "Rubber Surfacing" },
+] as const;
+
+const MOBILE_SERVICE_LINKS = [
+  { href: "/services", label: "All Services" },
+  ...SERVICE_LINKS,
+] as const;
 
 const { phone, hours, logo } = contactInfo;
 const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`;
@@ -46,14 +61,41 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
+function ChevronIcon({ open }: { open?: boolean }) {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+    >
+      <path
+        d="m6 9 6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const menuId = useId();
+  const servicesDropdownId = useId();
+  const desktopServicesRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     setMenuOpen(false);
+    setMobileServicesOpen(false);
+    setDesktopServicesOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -90,6 +132,30 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!desktopServicesOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setDesktopServicesOpen(false);
+    };
+
+    const onPointerDown = (event: MouseEvent) => {
+      if (
+        desktopServicesRef.current &&
+        !desktopServicesRef.current.contains(event.target as Node)
+      ) {
+        setDesktopServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("mousedown", onPointerDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("mousedown", onPointerDown);
+    };
+  }, [desktopServicesOpen]);
+
   const isHome = pathname === "/";
 
   const isActive = (href: string) => {
@@ -97,6 +163,7 @@ export default function Navbar() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
+  const servicesActive = isActive("/services");
   const navSolid = !isHome || scrolled || menuOpen;
 
   return (
@@ -117,6 +184,78 @@ export default function Navbar() {
           <ul className="hidden items-center gap-1 xl:flex">
             {NAV_LINKS.map((link) => {
               const active = isActive(link.href);
+
+              if ("hasDropdown" in link && link.hasDropdown) {
+                return (
+                  <li
+                    key={link.href}
+                    ref={desktopServicesRef}
+                    className="group relative"
+                    onMouseEnter={() => setDesktopServicesOpen(true)}
+                    onMouseLeave={() => setDesktopServicesOpen(false)}
+                  >
+                    <Link
+                      href={link.href}
+                      className={`relative inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors ${
+                        servicesActive
+                          ? "text-[var(--brand-color)]"
+                          : "text-white/90 hover:text-white"
+                      }`}
+                      aria-current={pathname === "/services" ? "page" : undefined}
+                      aria-expanded={desktopServicesOpen}
+                      aria-haspopup="true"
+                      aria-controls={servicesDropdownId}
+                      onFocus={() => setDesktopServicesOpen(true)}
+                    >
+                      {link.label}
+                      <ChevronIcon open={desktopServicesOpen} />
+                      {servicesActive ? (
+                        <span
+                          className="absolute bottom-0 left-1/2 h-[2px] w-8 -translate-x-1/2 rounded-full bg-[var(--brand-color)]"
+                          aria-hidden="true"
+                        />
+                      ) : null}
+                    </Link>
+
+                    <div
+                      id={servicesDropdownId}
+                      role="menu"
+                      aria-label="Services"
+                      className={`absolute top-full left-0 z-50 min-w-[240px] pt-2 transition-all duration-200 ${
+                        desktopServicesOpen
+                          ? "pointer-events-auto translate-y-0 opacity-100"
+                          : "pointer-events-none -translate-y-1 opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden rounded-xl border border-white/10 bg-[var(--black)] shadow-xl shadow-black/40">
+                        <ul className="py-2">
+                          {SERVICE_LINKS.map((service) => {
+                            const serviceActive = pathname === service.href;
+                            return (
+                              <li key={service.href} role="none">
+                                <Link
+                                  href={service.href}
+                                  role="menuitem"
+                                  className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                                    serviceActive
+                                      ? "bg-white/5 text-[var(--brand-color)]"
+                                      : "text-white/85 hover:bg-white/5 hover:text-white"
+                                  }`}
+                                  aria-current={serviceActive ? "page" : undefined}
+                                  onClick={() => setDesktopServicesOpen(false)}
+                                >
+                                  {service.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                );
+              }
+
               return (
                 <li key={link.href}>
                   <Link
@@ -185,10 +324,11 @@ export default function Navbar() {
 
       {/* Right-to-left slide drawer */}
       <aside
+        id={menuId}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
-        className={`fixed inset-y-0 right-0 z-999 flex w-[min(86vw,320px)] flex-col border-l border-white/10 bg-[var(--black)] shadow-lg backdrop-blur-xl transition-transform duration-300 ease-out sm:w-[min(70vw,380px)] xl:hidden ${
+        className={`fixed inset-y-0 right-0 z-[999] flex w-[min(86vw,320px)] flex-col border-l border-white/10 bg-[var(--black)] shadow-lg backdrop-blur-xl transition-transform duration-300 ease-out sm:w-[min(70vw,380px)] xl:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -209,6 +349,57 @@ export default function Navbar() {
         <ul className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
           {NAV_LINKS.map((link) => {
             const active = isActive(link.href);
+
+            if ("hasDropdown" in link && link.hasDropdown) {
+              return (
+                <li key={link.href}>
+                  <button
+                    type="button"
+                    className={`flex w-full items-center justify-between rounded-lg px-4 py-3.5 text-left text-base font-medium transition-colors ${
+                      servicesActive
+                        ? "bg-white/5 text-[var(--brand-color)]"
+                        : "text-white/90 hover:bg-white/5 hover:text-white"
+                    }`}
+                    aria-expanded={mobileServicesOpen}
+                    aria-controls={`${menuId}-services`}
+                    onClick={() => setMobileServicesOpen((open) => !open)}
+                  >
+                    <span>{link.label}</span>
+                    <ChevronIcon open={mobileServicesOpen} />
+                  </button>
+
+                  <div
+                    id={`${menuId}-services`}
+                    className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                      mobileServicesOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
+                  >
+                    <ul className="overflow-hidden">
+                      {MOBILE_SERVICE_LINKS.map((service) => {
+                        const serviceActive = pathname === service.href;
+                        return (
+                          <li key={service.href}>
+                            <Link
+                              href={service.href}
+                              className={`block rounded-lg py-2.5 pr-4 pl-8 text-sm font-medium transition-colors ${
+                                serviceActive
+                                  ? "bg-white/5 text-[var(--brand-color)]"
+                                  : "text-white/70 hover:bg-white/5 hover:text-white"
+                              }`}
+                              aria-current={serviceActive ? "page" : undefined}
+                              onClick={() => setMenuOpen(false)}
+                            >
+                              {service.label}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </li>
+              );
+            }
+
             return (
               <li key={link.href}>
                 <Link

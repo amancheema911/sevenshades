@@ -37,10 +37,10 @@ export const metadata: Metadata = {
 };
 
 const specs = [
-  { label: "Best for", value: "Homes · Entries · Service floors" },
-  { label: "Finish options", value: "Fine · Medium · Bold stone" },
-  { label: "Typical install", value: "3–5 days" },
-  { label: "Return to use", value: "Often 48–72 hours" },
+  { label: "Best for", value: "Deck, Patio" },
+  { label: "Finish options", value: "2-7 mm washed natural stones" },
+  { label: "Typical install", value: "1-2 days" },
+  { label: "Return to use", value: "Often 48-72 hours" },
 ];
 
 const benefits = [
@@ -98,29 +98,29 @@ const finishes = [
     id: "fine",
     name: "Fine Stone",
     detail: "Subtle aggregate texture with a refined stone look — ideal for entries, corridors, and polished interiors.",
-    image: "/images/services/service-commercial.webp",
+    image: "/images/services/stone-epoxy-1.3.jpeg",
   },
   {
     id: "medium",
     name: "Medium Stone",
     detail: "Balanced depth and grip for mudrooms, basements, retail floors, and busy household or commercial traffic.",
-    image: "/images/services/service-garage.webp",
+    image: "/images/services/stone-epoxy-1.4.jpeg",
   },
   {
     id: "bold",
     name: "Bold Stone",
     detail: "Heavier aggregate presence for maximum texture and toughness in wet-prone or high-abuse zones.",
-    image: "/images/services/service-industrial.webp",
+    image: "/images/services/stone-epoxy-1.5.jpeg",
   },
 ];
 
 const faqs = serviceFaqs["stone-epoxy"];
 
 const idealFor = [
+  "Decks & patio surfaces",
   "Home entries & mudrooms",
-  "Basements & wet-prone areas",
+  "Pool decks & outdoor walkways",
   "Retail & service floors",
-  "Garages with weather traffic",
 ];
 
 const related = services.filter((s) => s.id !== "stone-epoxy").slice(0, 3);
@@ -246,7 +246,7 @@ export default function StoneEpoxyPage() {
             <div className="relative order-1 lg:order-2 lg:col-span-7">
               <div className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] sm:rounded-[2.1rem]">
                 <Image
-                  src="/images/services/stone-epoxy.webp"
+                  src="/images/services/stone-epoxy-1.1.jpeg"
                   alt="Stone epoxy flooring with refined aggregate texture"
                   width={800}
                   height={800}
@@ -258,7 +258,7 @@ export default function StoneEpoxyPage() {
               <div className="absolute -bottom-5 -left-3 hidden w-[46%] overflow-hidden rounded-[1.35rem] shadow-xl sm:block lg:-left-8 lg:-bottom-7">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/services/service-garage.webp"
+                    src="/images/services/stone-epoxy-1.2.jpeg"
                     alt="Stone epoxy flooring texture detail"
                     width={400}
                     height={400}
@@ -372,7 +372,7 @@ export default function StoneEpoxyPage() {
         </div>
       </section>
             
-      {/* ── Process ── */}
+      {/* ── Installation Process ── */}
       <section className="relative overflow-hidden bg-gray-50 py-14 sm:py-16">
         <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-[var(--brand-color)]/12" />
         <div className="pointer-events-none absolute -bottom-20 left-0 h-56 w-56 rounded-full bg-black/20" />
@@ -400,7 +400,7 @@ export default function StoneEpoxyPage() {
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-black/8 pt-6">
                 <div>
                   <div>Typical install</div>
-                  <div className="text-2xl font-bold tracking-tight text-[#0B1120]">3–5 days</div>
+                  <div className="text-2xl font-bold tracking-tight text-[#0B1120]">1-2 days</div>
                 </div>
                 <span className="hidden h-10 w-px bg-black/10 sm:block" aria-hidden="true" />
                 <div>

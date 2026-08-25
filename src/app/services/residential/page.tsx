@@ -117,10 +117,8 @@ const finishes = [
 const faqs = serviceFaqs.residential;
 
 const idealFor = [
-  "Residential garages",
-  "Basements & recreation rooms",
-  "Mudrooms & laundry",
-  "Home workshops & gyms",
+  "Garages",
+  "Basements",
 ];
 
 const related = services.filter((s) => s.id !== "residential").slice(0, 3);

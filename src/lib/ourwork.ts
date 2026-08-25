@@ -45,29 +45,29 @@ export const featuredOurWorkIds = [
 ];
 
 export const ourWorkItems: OurWorkItem[] = [
-  {
-    id: "garage-showroom",
-    title: "Collector Garage",
-    category: "Garage Floors",
-    location: "Private Residence",
-    image: "/images/services/garage-1.webp",
-    imageAlt: "Luxury car on a finished garage epoxy floor",
-    description: "Showroom-grade garage flooring built for collectors — durable coating, high-gloss finish, and a surface that stays easy to clean through seasons of driving.",
-    images: [
-      {
-        src: "/images/services/garage.webp",
-        alt: "Luxury car on a finished garage epoxy floor",
-      },
-      {
-        src: "/images/services/garage-2.webp",
-        alt: "Wide view of the completed garage floor",
-      },
-      {
-        src: "/images/services/garage-3.webp",
-        alt: "Smooth garage floor under natural light",
-      },
-    ],
-  },
+  // {
+  //   id: "garage-showroom",
+  //   title: "Collector Garage",
+  //   category: "Garage Floors",
+  //   location: "Private Residence",
+  //   image: "/images/services/garage-1.webp",
+  //   imageAlt: "Luxury car on a finished garage epoxy floor",
+  //   description: "Showroom-grade garage flooring built for collectors — durable coating, high-gloss finish, and a surface that stays easy to clean through seasons of driving.",
+  //   images: [
+  //     {
+  //       src: "/images/services/garage.webp",
+  //       alt: "Luxury car on a finished garage epoxy floor",
+  //     },
+  //     {
+  //       src: "/images/services/garage-2.webp",
+  //       alt: "Wide view of the completed garage floor",
+  //     },
+  //     {
+  //       src: "/images/services/garage-3.webp",
+  //       alt: "Smooth garage floor under natural light",
+  //     },
+  //   ],
+  // },
   {
     id: "residential-living",
     title: "Open-Concept Home",
@@ -96,10 +96,10 @@ export const ourWorkItems: OurWorkItem[] = [
     imageAlt: "Close-up of blue and silver metallic epoxy floor",
     description: "Stunning metallic epoxy with flowing blue and silver movement — a unique, luxurious finish that shifts with the light and anchors the whole room.",
     images: [
-      {
-        src: "/images/services/metalic-floor-1.webp",
-        alt: "Close-up of blue and silver metallic epoxy floor",
-      },
+      // {
+      //   src: "/images/services/metalic-floor-1.webp",
+      //   alt: "Close-up of blue and silver metallic epoxy floor",
+      // },
       {
         src: "/images/services/metalic-floor-2.webp",
         alt: "Metallic floor in ambient evening light",
@@ -115,20 +115,20 @@ export const ourWorkItems: OurWorkItem[] = [
     title: "Stone-Look Entry",
     category: "Stone Epoxy",
     location: "Front Entry & Walk",
-    image: "/images/services/stone-flooring.webp",
+    image: "/images/services/stone-epoxy-1.1.jpeg",
     imageAlt: "Stone epoxy flooring with refined aggregate texture",
     description: "Natural stone look with durable textured grip — stone epoxy that handles wet boots and outdoor transitions while keeping a refined, architectural feel.",
     images: [
       {
-        src: "/images/services/stone-flooring-1.webp",
+        src: "/images/services/stone-epoxy.jpeg",
         alt: "Stone epoxy flooring with refined aggregate texture",
       },
       {
-        src: "/images/services/stone-flooring-2.webp",
+        src: "/images/services/stone-epoxy-1.3.jpeg",
         alt: "Entry path with stone epoxy finish",
       },
       {
-        src: "/images/services/stone-flooring-3.webp",
+        src: "/images/services/stone-epoxy-1.4.jpeg",
         alt: "Seamless stone epoxy transition at the doorway",
       },
     ],
@@ -138,16 +138,16 @@ export const ourWorkItems: OurWorkItem[] = [
     title: "Rubber Surfacing",
     category: "Rubber Surfacing",
     location: "Backyard Play Zone",
-    image: "/images/services/rubber-surfacing-1.webp",
+    image: "/images/services/rubber-surfacing.jpeg",
     imageAlt: "Rubber surfacing for recreation and activity spaces",
     description: "Soft, durable rubber surfacing for play — cushioned underfoot, easy to clean, and built to stay flat and safe in active spaces.",
     images: [
       {
-        src: "/images/services/rubber-surfacing-2.webp",
+        src: "/images/services/rubber-surfacing-1.1.jpeg",
         alt: "Rubber surfacing for recreation and activity spaces",
       },
       {
-        src: "/images/services/rubber-surfacing-3.webp",
+        src: "/images/services/rubber-surfacing-1.2.jpeg",
         alt: "Playground with rubber surfacing",
       },
     ],
