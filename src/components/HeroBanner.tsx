@@ -40,7 +40,7 @@ const TRUST_ITEMS = [
 ];
 function GalleryIcon() {
   return (
-    <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/30 text-white transition-transform duration-300 group-hover:scale-105 sm:size-11">
+    <span className="hidden size-10 shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/30 text-white transition-transform duration-300 group-hover:scale-105 sm:inline-flex sm:size-11">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" /><circle cx="8.5" cy="10" r="1.5" fill="currentColor" /><path d="m7 16 3.2-3.2a1 1 0 0 1 1.4 0L15 16l1.3-1.3a1 1 0 0 1 1.4 0L21 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </span>
@@ -68,38 +68,25 @@ export default function HeroBanner() {
                     eyebrow="Residential &amp; Commercial Epoxy Flooring"
                     title={<>Premium Epoxy Flooring In <span className="text-[var(--brand-color)]">Surrey, BC</span></>}
                     description="Durable. Beautiful. Built to Last. Transform your garage, basement, or commercial space with high-performance epoxy flooring installed by local experts."
-                    titleClassName="uppercase"
+                    titleClassName="sm:uppercase"
                   />
                 </div>
 
-                <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
-                  <Button href="/contact-us">Get A Free On-Site Estimate</Button>
+                <div className="mt-8 flex flex-wrap items-center gap-3 max-[399px]:flex-col max-[399px]:items-stretch sm:gap-4">
+                  <Button href="/contact-us" className="max-[450px]:w-full">
+                    Get A Free On-Site Estimate
+                  </Button>
 
-                  <Link href="/our-work" className="group inline-flex items-center gap-2.5 rounded-full border border-white/75 bg-transparent py-1.5 pr-1.5 pl-6 text-[0.95rem] font-semibold text-white transition-colors hover:border-white hover:bg-white/10 active:scale-[0.98]">
+                  <Link href="/our-work" className="group inline-flex items-center justify-center gap-0 rounded-xl border border-white/75 bg-transparent py-3 pr-6 pl-6 text-sm text-white transition-colors hover:border-white hover:bg-white/10 max-[450px]:w-full sm:justify-between sm:gap-2.5 sm:rounded-full sm:pr-1.5 sm:pl-7 sm:py-1.5">
                     View Our Work
                     <GalleryIcon />
                   </Link>
-                </div>
-
-                <div className="mt-8 w-full max-w-3xl rounded-2xl border border-[var(--brand-color)]/25 bg-[var(--black)]/90 px-3 py-5 shadow-md backdrop-blur-sm">
-                  <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-2 lg:gap-3">
-                    {TRUST_ITEMS.map((item) => (
-                      <li key={item.id} className="flex items-center gap-2.5">
-                        <span className="text-[var(--brand-color)]">{item.icon}</span>
-                        <span className="text-xs font-semibold tracking-wide text-white uppercase">
-                          <span className="block">{item.line1}</span>
-                          <span className="block">{item.line2}</span>
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
+                </div> 
               </div>
             </div>
 
             <div className="animate-hero-rise-delayed flex justify-center lg:col-span-5 lg:justify-end">
-              <FlooringQuoteForm tone="dark" />
+              <FlooringQuoteForm tone="light" smTone="dark" />
             </div>
           </div>
         </div>

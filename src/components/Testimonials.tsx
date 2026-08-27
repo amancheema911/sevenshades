@@ -3,24 +3,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Heading from "@/components/Heading";
 import { testimonials, testimonialRating, type Testimonial, } from "@/lib/testimonials";
 
-function QuoteIcon() {
-  return (
-    <svg
-      width="28"
-      height="28"
-      viewBox="0 0 32 32"
-      fill="none"
-      aria-hidden="true"
-      className="text-[var(--brand-color)]"
-    >
-      <circle cx="7" cy="9" r="3" fill="currentColor" />
-      <circle cx="15" cy="9" r="3" fill="currentColor" />
-      <circle cx="7" cy="17" r="3" fill="currentColor" />
-      <circle cx="15" cy="17" r="3" fill="currentColor" />
-    </svg>
-  );
-}
-
 function Stars({ count }: { count: number }) {
   return (
     <div className="flex items-center gap-0.5" aria-hidden="true">
@@ -42,7 +24,14 @@ function Stars({ count }: { count: number }) {
 function TestimonialCard({ item }: { item: Testimonial }) {
   return (
     <article className="flex flex-col rounded-[1.5rem] shadow-sm bg-white p-6 sm:p-7 space-y-4">
-      <QuoteIcon />
+      <div className="flex items-center gap-2.5">
+        <Stars count={testimonialRating.stars} />
+        <div>
+          <span className="font-semibold text-[#0B1120]">
+            {testimonialRating.score}
+          </span>{" "}
+        </div>
+      </div>
       <p>{item.quote}</p>
       <div className="mt-6 flex items-center gap-3">
         <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{ backgroundColor: item.avatarColor }} aria-hidden="true">
@@ -131,16 +120,6 @@ export default function Testimonials() {
                 </>
               }
             />
-          </div>
-
-          <div className="flex items-center gap-2.5">
-            <Stars count={testimonialRating.stars} />
-            <div>
-              <span className="font-semibold text-[#0B1120]">
-                {testimonialRating.score}
-              </span>{" "}
-              <span>{testimonialRating.countLabel}</span>
-            </div>
           </div>
         </div>
 

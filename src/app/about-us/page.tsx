@@ -294,7 +294,7 @@ export default function AboutUsPage() {
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgba(5,9,16,0.65)_100%)]" />
                 </div>
 
-                <div className="absolute -right-2 -bottom-8 w-[42%] overflow-hidden rounded-[1.15rem] shadow-xl sm:-right-4 sm:-bottom-10 sm:rounded-[1.35rem] lg:-right-6 animate-about-float">
+                <div className="hidden sm:block absolute -right-2 -bottom-8 w-[42%] overflow-hidden rounded-[1.15rem] shadow-xl sm:-right-4 sm:-bottom-10 sm:rounded-[1.35rem] lg:-right-6 animate-about-float">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src="/images/metalic-epoxy.webp"
@@ -446,7 +446,7 @@ export default function AboutUsPage() {
                 <div className="pointer-events-none absolute top-[3%] right-0 z-0 h-[28%] w-[38%] opacity-60 sm:top-[4%] sm:h-[36%] sm:w-[42%] sm:opacity-70" style={{ backgroundImage: "radial-gradient(circle, rgba(11,17,32,0.14) 1.1px, transparent 1.2px)", backgroundSize: "10px 10px", }} />
 
                 {/* Top/back image — left aligned (your position) */}
-                <div className="relative mr-auto aspect-[4/5] w-[78%] max-w-[450px] overflow-hidden rounded-[1.15rem] shadow-xl sm:w-[75%] sm:rounded-[1.35rem] lg:w-[72%]">
+                <div className="relative mr-auto aspect-[4/5] w-full sm:w-[78%] max-w-[450px] overflow-hidden rounded-[1.15rem] shadow-xl sm:w-[75%] sm:rounded-[1.35rem] lg:w-[72%]">
                   <Image
                     src="/images/solid-floor.webp"
                     alt="Premium epoxy floor hallway with soft natural light"
@@ -457,7 +457,7 @@ export default function AboutUsPage() {
                 </div>
 
                 {/* Bottom/front image — right + bottom (your position) */}
-                <div className="absolute right-0 bottom-4 z-[2] aspect-[4/3] w-[68%] max-w-[260px] overflow-hidden rounded-[1.15rem] shadow-xl sm:bottom-10 sm:w-[60%] sm:max-w-[340px] sm:rounded-[1.35rem] lg:max-w-[380px]">
+                <div className="hidden sm:block absolute right-0 bottom-4 z-[2] aspect-[4/3] w-[68%] max-w-[260px] overflow-hidden rounded-[1.15rem] shadow-xl sm:bottom-10 sm:w-[60%] sm:max-w-[340px] sm:rounded-[1.35rem] lg:max-w-[380px]">
                   <Image
                     src="/images/solid-floor-1.webp"
                     alt="Luxury living space with finished epoxy flooring"
@@ -468,7 +468,7 @@ export default function AboutUsPage() {
                 </div>
 
                 {/* Satisfaction callout — top right (your position) */}
-                <div className="absolute top-4 right-0 z-[3] flex w-[38%] max-w-[120px] flex-col items-center justify-center bg-[var(--brand-color)] px-2.5 py-4 text-center text-white shadow-md sm:top-10 sm:w-[38%] sm:max-w-[168px] sm:px-4 sm:py-7 space-y-2">
+                <div className="hidden sm:block absolute top-4 right-0 z-[3] flex w-[38%] max-w-[120px] flex-col items-center justify-center bg-[var(--brand-color)] px-2.5 py-4 text-center text-white shadow-md sm:top-10 sm:w-[38%] sm:max-w-[168px] sm:px-4 sm:py-7 space-y-2">
                   <div className="text-4xl font-bold tracking-tight">98%</div>
                   <p className="text-white/70">Client Satisfaction Rate</p>
                 </div>

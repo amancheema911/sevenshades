@@ -11,7 +11,7 @@ const CTA_PERKS = [
 
 function CalendarIcon() {
   return (
-    <span className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/30 text-white transition-transform duration-300 group-hover:scale-105 size-10 sm:size-11">
+    <span className="hidden size-10 shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/30 text-white transition-transform duration-300 group-hover:scale-105 sm:inline-flex sm:size-11">
       <svg
       width="16"
       height="16"
@@ -93,10 +93,10 @@ export default function CallToAction() {
               <p className="text-white/70">Get a free consultation and estimate today.</p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
-                <Button href="/contact-us">Get Free Quote</Button>
+                <Button href="/contact-us" className="max-[450px]:w-full">Get Free Quote</Button>
                 <Link
                   href="/contact-us"
-                  className="group inline-flex items-center gap-2.5 rounded-full border border-white/75 bg-transparent py-1.5 pr-1.5 pl-6 text-[0.95rem] font-semibold text-white transition-colors hover:border-white hover:bg-white/10 active:scale-[0.98]"
+                  className="group inline-flex items-center justify-center gap-0 rounded-xl border border-white/75 bg-transparent py-3 pr-6 pl-6 text-sm text-white transition-colors hover:border-white hover:bg-white/10 max-[450px]:w-full sm:justify-between sm:gap-2.5 sm:rounded-full sm:pr-1.5 sm:pl-7 sm:py-1.5"
                 >
                   Schedule Consultation
                   <CalendarIcon />

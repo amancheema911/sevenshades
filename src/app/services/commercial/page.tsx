@@ -197,13 +197,25 @@ export default function CommercialPage() {
       />
 
       {/* ── Spec strip ── */}
-      <section className="relative border-b border-black/5 bg-gray-50 py-6 sm:py-8">
+      <section className="relative lg:border-b border-black/5 bg-gray-50 py-6 sm:py-8">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <dl className="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
+          <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-0">
             {specs.map((spec, index) => (
-              <div key={spec.label} className={index > 0 ? "lg:border-l lg:border-black/8 lg:pl-8" : undefined}>
-                <dt className="text-xs font-bold tracking-[0.2em] text-[var(--brand-color)] uppercase">{spec.label}</dt>
-                <dd className=" text-lg font-bold tracking-tight text-black">{spec.value}</dd>
+              <div
+                key={spec.label}
+                className={[
+                  "rounded-xl border border-black/8 bg-white px-3.5 py-4",
+                  "sm:px-4 sm:py-5",
+                  "lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0",
+                  index > 0 ? "lg:border-l lg:border-black/8 lg:pl-8" : "",
+                ].join(" ")}
+              >
+                <dt className="text-[0.65rem] font-bold tracking-[0.14em] text-[var(--brand-color)] uppercase sm:text-xs sm:tracking-[0.2em]">
+                  {spec.label}
+                </dt>
+                <dd className="mt-1 text-sm font-bold leading-snug tracking-tight text-black sm:text-base lg:text-lg">
+                  {spec.value}
+                </dd>
               </div>
             ))}
           </dl>
@@ -280,7 +292,7 @@ export default function CommercialPage() {
 
       {/* ── Benefits ── */}
       <section className="relative overflow-hidden bg-[var(--black)] py-14 sm:py-16">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(13,127,232,0.14),transparent_50%),radial-gradient(ellipse_at_0%_100%,rgba(13,127,232,0.06),transparent_40%)]" />
+        <div className="hidden sm:block pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(13,127,232,0.14),transparent_50%),radial-gradient(ellipse_at_0%_100%,rgba(13,127,232,0.06),transparent_40%)]" />
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -320,11 +332,11 @@ export default function CommercialPage() {
                     .filter(Boolean)
                     .join(" ")}
                 >
-                  <span className="pointer-events-none absolute top-4 right-5  text-6xl font-bold leading-none tracking-tight text-white/[0.04] transition-colors duration-500 group-hover:text-[var(--brand-color)]/15 sm:top-5 sm:right-6 sm:text-7xl">{number}</span>
+                  <span className="pointer-events-none hidden sm:block absolute top-4 right-5  text-6xl font-bold leading-none tracking-tight text-white/[0.04] transition-colors duration-500 group-hover:text-[var(--brand-color)]/15 sm:top-5 sm:right-6 sm:text-7xl">{number}</span>
 
                   <div className="relative z-10 flex h-full flex-col text-white/85 space-y-2">
-                    <span className="inline-flex items-center gap-3 text-[0.72rem] font-semibold tracking-[0.16em] text-[var(--brand-color)] uppercase">
-                      <span className="h-px w-6 bg-[var(--brand-color)] transition-all duration-500 group-hover:w-10" />
+                    <span className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.16em] text-[var(--brand-color)] uppercase">
+                      <span className="hidden sm:block h-px w-6 bg-[var(--brand-color)] transition-all duration-500 group-hover:w-10" />
                       {number}
                     </span>
                     <h3 className="mt-5  text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[var(--brand-color)] sm:text-2xl">{benefit.title}</h3>
@@ -376,8 +388,8 @@ export default function CommercialPage() {
 
       {/* ── Process ── */}
       <section className="relative overflow-hidden bg-gray-50 py-14 sm:py-16">
-        <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-[var(--brand-color)]/12" />
-        <div className="pointer-events-none absolute -bottom-20 left-0 h-56 w-56 rounded-full bg-black/20" />
+        <div className="hidden sm:block pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-[var(--brand-color)]/12" />
+        <div className="hidden sm:block pointer-events-none absolute -bottom-20 left-0 h-56 w-56 rounded-full bg-black/20" />
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16 xl:gap-20">
@@ -399,7 +411,7 @@ export default function CommercialPage() {
                 descriptionClassName="max-w-md"
               />
 
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-black/8 pt-6">
+              <div className="mt-8 hidden sm:flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-black/8 pt-6">
                 <div>
                   <div>Typical install</div>
                   <div className="text-2xl font-bold tracking-tight text-[#0B1120]">2–5 days</div>

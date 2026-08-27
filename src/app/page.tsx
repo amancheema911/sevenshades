@@ -48,7 +48,9 @@ export default function Home() {
       <FloorServices exclude={["residential", "commercial"]} />
 
       {/* Reviews Section */}
-      <ReviewsBar />
+      <section className="relative overflow-hidden py-5 sm:py-6 lg:py-8 hidden sm:block">
+        <ReviewsBar />
+      </section>
 
       {/* Why Choose Us Section */}
       <WhyChooseUs />
@@ -57,7 +59,7 @@ export default function Home() {
       <OurProcess />
 
       {/* Before & After Section */}
-      <section className="relative -mt-6 rounded-t-[2rem] bg-gray-50 sm:-mt-10 sm:rounded-t-[2.75rem] lg:rounded-t-[3.5rem]">
+      <section className="relative bg-gray-50 sm:-mt-10 sm:rounded-t-[2.75rem] lg:rounded-t-[3.5rem]">
         <Visualize />
       </section>
       

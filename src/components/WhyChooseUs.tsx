@@ -151,7 +151,7 @@ export default function WhyChooseUs() {
   return (
     <section className="bg-gray-50 py-14 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 sm:rounded-[2.25rem] lg:rounded-[2.75rem]">
-        <div className="rounded-[1.75rem] bg-white overflow-hidden px-6 py-8 sm:px-8 sm:py-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-0 lg:items-center">
+        <div className="sm:rounded-[1.75rem] sm:bg-white overflow-hidden sm:px-8 sm:py-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-0 lg:items-center">
           {/* Left content */}
           <div className="lg:col-span-4 lg:pr-10 xl:pr-14 space-y-4">
             <Heading

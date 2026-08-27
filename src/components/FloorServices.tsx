@@ -13,11 +13,11 @@ export default function FloorServices({ exclude = [] }: FloorServicesProps) {
   );
 
   return (
-    <section className="relative bg-[var(--black)] py-6 sm:py-8" aria-labelledby="floor-services-heading">
+    <section className="relative bg-white sm:bg-[var(--black)] py-6 sm:py-8" aria-labelledby="floor-services-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-8 xl:gap-10">
           <div className="lg:col-span-3">
-            <h2 className="lg:max-w-[18ch] text-2xl font-semibold text-white uppercase sm:text-3xl lg:max-w-none">
+            <h2 className="lg:max-w-[18ch] text-2xl font-semibold text-black sm:text-white sm:uppercase sm:text-3xl lg:max-w-none">
               Floors That Look{" "}
               <span className="text-[var(--brand-color)]">Amazing &amp; Perform</span>{" "}
               Even Better.
@@ -27,7 +27,7 @@ export default function FloorServices({ exclude = [] }: FloorServicesProps) {
               <span className="h-px w-10 bg-[var(--brand-color)]" />
             </div>
 
-            <p className="mt-3 text-white/70">Engineered for durability. Designed for your lifestyle.</p>
+            <p className="mt-3 text-black sm:text-white/70">Engineered for durability. Designed for your lifestyle.</p>
           </div>
 
           <div className="lg:col-span-9">
@@ -52,9 +52,7 @@ export default function FloorServices({ exclude = [] }: FloorServicesProps) {
                       <span className="inline-flex shrink-0 text-[var(--brand-color)]">
                         <div dangerouslySetInnerHTML={{ __html: service.icon as string }} />
                       </span>
-                      <span className="min-w-0 truncate text-[0.65rem] font-medium tracking-wide text-white uppercase sm:text-xs">
-                        {service.title}
-                      </span>
+                      <span className="truncate text-xs font-medium tracking-wide text-white uppercase sm:text-xs">{service.title}</span>
                     </div>
                   </Link>
                 </li>

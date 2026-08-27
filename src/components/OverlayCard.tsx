@@ -106,8 +106,8 @@ export default function OverlayCard({
           </div>
         </div>
       ) : (
-        <div className="absolute inset-x-0 bottom-0 p-3 opacity-0 transition-all duration-500 group-hover:opacity-100 sm:p-4">
-          <div className="translate-y-3 rounded-2xl border border-white/20 bg-white/15 p-3 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-0">
+        <div className="absolute inset-x-0 bottom-0 p-3 opacity-100 transition-all duration-500 sm:p-4 sm:opacity-0 sm:group-hover:opacity-100">
+          <div className="translate-y-0 rounded-2xl border border-white/20 bg-white/15 p-3 backdrop-blur-md transition-transform duration-500 sm:translate-y-3 sm:group-hover:translate-y-0">
             {category ? (
               <p className="text-xs font-medium text-white/70 uppercase">{category}</p>
             ) : null}

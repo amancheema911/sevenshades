@@ -236,13 +236,13 @@ export default function Visualize() {
               </div>
 
               <div className="absolute inset-y-0 z-10 w-0.5 bg-[var(--brand-color)]" style={{ left: `${position}%`, transform: "translateX(-50%)" }} aria-hidden="true">
-                <span className="absolute top-1/2 left-1/2 flex size-15 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--brand-color)] text-white ring-2 ring-[var(--brand-color)]/40">
+                <span className="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--brand-color)] text-white ring-2 ring-[var(--brand-color)]/40">
                   <SliderHandleIcon />
                 </span>
               </div>
             </div>
 
-            <div className="mt-4 flex items-center justify-center gap-3 border-b border-black/10 py-4 sm:gap-6">
+            <div className="hidden mt-4 sm:flex items-center justify-center gap-3 border-b border-black/10 py-4 sm:gap-6">
               <div className="min-w-0 flex-1 text-center sm:text-left">
                 <p className="text-sm font-semibold text-[var(--brand-color)]">BEFORE</p>
                 <p className="text-black/70">Worn. Dull. Uninspiring.</p>
@@ -257,10 +257,10 @@ export default function Visualize() {
 
           {/* Features */}
           <div className="lg:col-span-3">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-6 sm:gap-y-8 lg:grid-cols-1 lg:gap-y-5">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-3 sm:gap-x-6 sm:gap-y-6 lg:grid-cols-1 lg:gap-y-5">
               {FEATURES.map((feature) => (
-                <li key={feature.id} className="flex flex-row  gap-4 items-center gap-2.5 bg-white/60 rounded-2xl p-3 border border-black/8">
-                  <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-[var(--brand-color)] text-white sm:size-14 lg:size-12">
+                <li key={feature.id} className="flex flex-row  gap-4 items-center gap-2.5 bg-white/60 rounded-2xl p-2 sm:p-3 border border-black/8">
+                  <span className="inline-flex size-9 sm:size-10 shrink-0 items-center justify-center rounded-full bg-[var(--brand-color)] text-white">
                     <FeatureIcon icon={feature.icon} />
                   </span>
                   <div className="text-sm font-semibold text-[#0B1120]">{feature.label}</div>
@@ -268,11 +268,10 @@ export default function Visualize() {
               ))}
             </ul>
 
-            <div className="mt-8 flex justify-center lg:mt-10 lg:justify-start">
+            <div className="hidden mt-8 sm:flex justify-center lg:mt-10 lg:justify-start">
               <div className="inline-flex items-center gap-2 rounded-full border border-black/15 px-3 py-2 text-black/70">
                 <span className="shrink-0 text-[var(--brand-color)]"><DragHandIcon /></span>
-                <span className="sm:hidden">Drag to compare</span>
-                <span className="hidden sm:inline">Drag the slider left or right to compare</span>
+                <span>Drag the slider left or right to compare</span>
               </div>
             </div>
           </div>

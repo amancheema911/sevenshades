@@ -291,12 +291,12 @@ export default function Navbar() {
             </a>
 
             <div className="hidden sm:block">
-              <Button href="/contact-us" size="sm">Get Free Quote</Button>
+              <Button href="/contact-us">Get Free Quote</Button>
             </div>
 
             <button
               type="button"
-              className="inline-flex size-11 items-center justify-center rounded-full border border-white/70 text-white transition-colors hover:border-white hover:bg-white/10 xl:hidden"
+              className="inline-flex size-11 items-center justify-center rounded-full bg-[var(--brand-color)] cursor-pointer text-white xl:hidden"
               aria-expanded={menuOpen}
               aria-controls={menuId}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -338,7 +338,7 @@ export default function Navbar() {
           </span>
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:border-white hover:bg-white/10"
+            className="inline-flex size-10 items-center justify-center rounded-full bg-[var(--brand-color)] text-white"
             aria-label="Close menu"
             onClick={() => setMenuOpen(false)}
           >

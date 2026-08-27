@@ -50,7 +50,38 @@ const TONE_STYLES = {
     footer: "text-black/45",
     error: "border-red-300 bg-red-50 text-red-700",
   },
-};
+} as const;
+
+/** Light below `sm`, dark from `sm` up — classes must be static for Tailwind. */
+const LIGHT_SM_DARK_STYLES = {
+  shell:
+    "border-black/10 bg-white shadow-xl sm:border-[var(--brand-color)]/50 sm:bg-[var(--black)]/90 sm:shadow-md sm:backdrop-blur-xl",
+  eyebrow: "text-[var(--black)] sm:text-white",
+  description: "text-black/60 sm:text-white/80",
+  label: "text-[var(--black)] sm:text-white",
+  field:
+    "border-black/12 bg-[#F7F8FA] text-[var(--black)] placeholder:text-black/40 focus:border-[var(--brand-color)]/60 focus:bg-white sm:border-white/12 sm:bg-[var(--black)]/70 sm:text-white/80 sm:placeholder:text-white/55 sm:focus:border-[var(--brand-color)]/65 sm:focus:bg-[var(--black)]/80",
+  option: "bg-white text-[var(--black)] sm:bg-[var(--black)] sm:text-white",
+  optionDisabled: "bg-[#F7F8FA] text-black/45 sm:bg-[#0c1a2e] sm:text-white/50",
+  chevron: "text-black/40 sm:text-white/55",
+  dividerLine: "bg-black/10 sm:bg-white/15",
+  dividerText: "text-black/40 sm:text-white/45",
+  successBox: "border-black/10 bg-[#F7F8FA] sm:border-white/15 sm:bg-white/5",
+  successTitle: "text-[var(--black)] sm:text-white",
+  successBody: "text-black/60 sm:text-white/65",
+  footer: "text-black/45 sm:text-white/50",
+  error:
+    "border-red-300 bg-red-50 text-red-700 sm:border-red-400/30 sm:bg-red-500/10 sm:text-red-200",
+} as const;
+
+type ToneStyles =
+  | (typeof TONE_STYLES)[FormTone]
+  | typeof LIGHT_SM_DARK_STYLES;
+
+function resolveToneStyles(tone: FormTone, smTone?: FormTone): ToneStyles {
+  if (tone === "light" && smTone === "dark") return LIGHT_SM_DARK_STYLES;
+  return TONE_STYLES[tone];
+}
 
 function LockIcon() {
   return (
@@ -90,11 +121,13 @@ function ChevronDownIcon({ className = "" }: { className?: string }) {
 export default function FlooringQuoteForm({
   className = "",
   tone = "dark",
+  smTone,
 }: {
   className?: string;
   tone?: FormTone;
+  smTone?: FormTone;
 }) {
-  const styles = TONE_STYLES[tone];
+  const styles = resolveToneStyles(tone, smTone);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -156,8 +189,8 @@ export default function FlooringQuoteForm({
         .join(" ")}
     >
       <div className="relative z-10">
-        <p className={`text-xl font-semibold tracking-wide uppercase ${styles.eyebrow}`}>Get Your Free</p>
-        <h2 className="text-[1.25rem] leading-[1.15] font-bold tracking-tight text-[var(--brand-color)] uppercase sm:text-[1.5rem]">Epoxy Flooring Quote</h2>
+        <p className={`text-xl font-semibold tracking-wide sm:uppercase ${styles.eyebrow}`}>Get Your Free</p>
+        <h2 className="text-[1.25rem] leading-[1.15] font-bold tracking-tight text-[var(--brand-color)] sm:uppercase sm:text-[1.5rem]">Epoxy Flooring Quote</h2>
 
         <div className="mt-3 flex items-center" aria-hidden="true">
           <span className="h-px w-10 bg-[var(--brand-color)]" />
@@ -291,16 +324,15 @@ export default function FlooringQuoteForm({
             <div className="flex justify-end">
               <Button
                 type="submit"
-                size="sm"
                 disabled={submitting}
                 showIcon={!submitting}
-                className="uppercase"
+                className="uppercase max-[450px]:w-full"
               >
                 {submitting ? "Sending..." : "Get My Free Estimate"}
               </Button>
             </div>
 
-            <p className={`flex justify-center gap-1.5 pt-0.5 text-center text-[0.72rem] ${styles.footer}`}>
+            <p className={`flex gap-1.5 pt-0.5 text-[0.72rem] ${styles.footer}`}>
               <LockIcon />
               No obligation. Your information is safe and secure.
             </p>

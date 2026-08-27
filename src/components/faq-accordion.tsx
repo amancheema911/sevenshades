@@ -121,11 +121,11 @@ export default function FaqAccordion({
 
             <h3 className="m-0">
               <button id={buttonId} type="button" aria-expanded={isOpen} aria-controls={panelId} onClick={() => toggle(key)} className="group/btn flex w-full items-center gap-4 px-4 py-4 text-left sm:gap-5">
-                <span className={cx( "mt-0.5  text-sm font-bold tracking-[0.14em] transition-colors duration-300 sm:text-base", isOpen ? "text-[var(--brand-color)]" : "text-black/25", )}>
+                <span className={cx( "mt-0.5 hidden sm:block text-sm font-bold tracking-[0.14em] transition-colors duration-300 sm:text-base", isOpen ? "text-[var(--brand-color)]" : "text-black/25", )}>
                   {number}
                 </span>
 
-                <span className={cx( "min-w-0 flex-1  text-[1.05rem] font-bold leading-snug tracking-tight text-[#0B1120] transition-colors duration-300 sm:text-lg", !isOpen && "opacity-90 group-hover/btn:opacity-100", )}>
+                <span className={cx( "min-w-0 flex-1  text-md font-bold leading-snug tracking-tight text-black transition-colors duration-300 sm:text-md md:text-lg", !isOpen && "opacity-90 group-hover/btn:opacity-100", )}>
                   {item.question}
                 </span>
 
@@ -145,7 +145,7 @@ export default function FaqAccordion({
                 ready && "transition-[max-height] duration-500 ease-out",
               )}
             >
-              <div className="max-w-3xl px-5 pb-5 pl-[3.35rem] leading-relaxed text-black/55 sm:px-6 sm:pb-6 sm:pl-[4.1rem]">
+              <div className="max-w-3xl px-5 pb-5 leading-relaxed text-black/55 sm:px-6 sm:pb-6 sm:pl-[4.1rem]">
                 <p className="m-0">{item.answer}</p>
               </div>
             </div>

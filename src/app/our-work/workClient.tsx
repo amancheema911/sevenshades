@@ -260,7 +260,7 @@ function ProjectLightbox({
               </div>
             </div>
 
-            <Button href="/contact-us" size="sm">
+            <Button href="/contact-us">
               Start a Similar Project
             </Button>
           </div>

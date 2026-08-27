@@ -76,8 +76,8 @@ export default function FlakeColorOptions() {
 
   return (
     <section id="flake-colors" className="relative overflow-hidden bg-[#f4f6f8] py-14 sm:py-16">
-      <div className="pointer-events-none absolute -top-24 right-0 h-80 w-80 rounded-full bg-[var(--brand-color)]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 left-0 h-72 w-72 rounded-full bg-black/5 blur-3xl" />
+      <div className="hidden sm:block pointer-events-none absolute -top-24 right-0 h-80 w-80 rounded-full bg-[var(--brand-color)]/10 blur-3xl" />
+      <div className="hidden sm:block pointer-events-none absolute -bottom-32 left-0 h-72 w-72 rounded-full bg-black/5 blur-3xl" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -164,7 +164,7 @@ export default function FlakeColorOptions() {
               </ul>
 
               <div className="mt-6">
-                <Button href="/contact-us" size="sm">
+                <Button href="/contact-us" className="max-[450px]:w-full">
                   Request Now
                 </Button>
               </div>

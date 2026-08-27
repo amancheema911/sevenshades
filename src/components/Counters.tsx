@@ -92,7 +92,26 @@ export default function Counters({
   return (
     <section className={`bg-gray-50 py-14 sm:py-16 ${className}`} aria-label="Company statistics">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-[var(--black)] px-5 py-7 sm:rounded-[2rem] sm:px-8 sm:py-8 lg:rounded-[2.5rem] lg:px-10 lg:py-9">
+        {/* Mobile: 2×2 white cards */}
+        <ul className="grid grid-cols-2 gap-3 sm:hidden">
+          {items.map((item) => (
+            <li
+              key={item.id}
+              className="flex flex-col items-center justify-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-5 text-center shadow-sm"
+            >
+              <span className="inline-flex text-[var(--brand-color)]">
+                <CounterGlyph icon={item.icon} />
+              </span>
+              <div className="text-2xl font-bold tracking-tight text-[var(--brand-color)]">
+                {item.value}
+              </div>
+              <div className="text-sm leading-snug text-[var(--black)]">{item.label}</div>
+            </li>
+          ))}
+        </ul>
+
+        {/* sm+: dark bar layout */}
+        <div className="hidden rounded-3xl bg-[var(--black)] px-5 py-7 sm:block sm:rounded-[2rem] sm:px-8 sm:py-8 lg:rounded-[2.5rem] lg:px-10 lg:py-9">
           <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-6">
             {items.map((item) => (
               <li key={item.id} className="flex items-center gap-4">
