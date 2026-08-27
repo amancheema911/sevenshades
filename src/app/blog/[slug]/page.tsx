@@ -249,7 +249,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="relative z-10 space-y-3">
                   <h3 className="text-lg font-bold text-white">Ready to upgrade your floors?</h3>
                   <p className="text-sm text-white/65">Get a free, no-obligation quote from our team.</p>
-                  <Button href="/contact-us" size="sm" fullWidth>Get Free Quote</Button>
+                  <Button href="/contact-us" className="max-[450px]:w-full">Get Free Quote</Button>
                 </div>
               </div>
             </aside>
