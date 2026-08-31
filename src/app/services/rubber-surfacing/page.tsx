@@ -95,21 +95,21 @@ const process = [
 
 const finishes = [
   {
-    id: "tiles",
-    name: "Rubber Tiles",
-    detail: "Interlocking tiles for fast install, modular replacement, and flexible layouts in gyms and play rooms.",
-    image: "/images/services/rubber-surfacing-1.2.jpeg",
+    id: "designs",
+    name: "Design",
+    detail: "Custom color blends, patterns, and decorative finishes that give pool decks, patios, and balconies a polished, intentional look.",
+    image: "/images/services/rubber-surfacing-design.webp",
   },
   {
-    id: "rolls",
-    name: "Rubber Rolls",
-    detail: "Continuous rolled rubber for cleaner sightlines and fewer seams in training floors and recreational interiors.",
-    image: "/images/services/rubber-surfacing.jpeg",
+    id: "borders",
+    name: "Borders",
+    detail: "Contrasting edge bands and accent borders that define walkways, pool perimeters, and seating zones with clean visual separation.",
+    image: "/images/services/rubber-surfacing-border.webp",
   },
   {
     id: "poured",
     name: "Poured Systems",
-    detail: "Seamless poured rubber for outdoor play zones and custom shapes that need continuous coverage and strong drainage performance.",
+    detail: "Seamless poured-in-place rubber for pool decks, patios, and outdoor surfaces — continuous coverage with strong grip and drainage.",
     image: "/images/services/rubber-surfacing-1.1.jpeg",
   },
 ];

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 const specs = [
   { label: "Best for", value: "Commercial Floors, Warehouses" },
-  { label: "Finish options", value: "Gloss · Satin · Light texture" },
+  { label: "Finish options", value: "Full Broadcast, Partial Flakes, Solid Color" },
   { label: "Typical install", value: "2–3 days" },
   { label: "Return to use", value: "Usually 48–72 hours" },
 ];
@@ -259,7 +259,7 @@ export default function SolidEpoxyPage() {
             <div className="relative order-1 lg:order-2 lg:col-span-7">
               <div className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] sm:rounded-[2.1rem]">
                 <Image
-                  src="/images/services/solid-epoxy.webp"
+                  src="/images/services/solid-epoxy-flooring.webp"
                   alt="Solid color epoxy flooring finish"
                   width={800}
                   height={800}

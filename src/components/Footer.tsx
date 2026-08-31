@@ -76,9 +76,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#05070b] text-white w-full">
       <div className="mx-auto container px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-12 xl:gap-6">
           {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-3">
+          <div className="sm:col-span-2 xl:col-span-3 text-sm">
             <Link href="/" className="inline-flex items-center gap-3" aria-label="Seven Shades home">
               <Image src={logo} alt="Seven Shades" width={220} height={220} />
             </Link>
@@ -100,9 +100,9 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="xl:col-span-2">
             <h2 className="text-base font-semibold text-white">Quick Links</h2>
-            <ul className="mt-5 flex flex-col gap-3">
+            <ul className="mt-5 flex flex-col gap-3 text-sm">
               {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -112,9 +112,9 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div className="xl:col-span-2">
             <h2 className="text-base font-semibold text-white">Services</h2>
-            <ul className="mt-5 flex flex-col gap-3">
+            <ul className="mt-5 flex flex-col gap-3 text-sm">
               {SERVICES.map((link) => (
                 <li key={link.href}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -124,9 +124,9 @@ export default function Footer() {
           </div>
 
           {/* Support */}
-          <div className="lg:col-span-2">
+          <div className="xl:col-span-2">
             <h2 className="text-base font-semibold text-white">Support</h2>
-            <ul className="mt-5 flex flex-col gap-3">
+            <ul className="mt-5 flex flex-col gap-3 text-sm">
               {SUPPORT.map((link) => (
                 <li key={link.href}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -136,30 +136,30 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="lg:col-span-3">
+          <div className="xl:col-span-3">
             <h2 className="text-base font-semibold text-white">Contact Us</h2>
-            <ul className="mt-5 flex flex-col gap-4">
+            <ul className="mt-5 flex flex-col gap-4 text-sm">
               <li>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                     <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white/80"><PhoneIcon /></span>
                     <div className="flex flex-wrap gap-2">
-                      <a href={phoneHref} className="flex items-start text-[0.92rem] text-white/55 transition-colors hover:text-white">
+                      <a href={phoneHref} className="flex items-start text-white/55 transition-colors hover:text-white">
                         <span className="flex-1 break-words">{phone},</span>    
                       </a>
-                      <a href={secondaryPhoneHref} className="flex items-start text-[0.92rem] text-white/55 transition-colors hover:text-white">
+                      <a href={secondaryPhoneHref} className="flex items-start text-white/55 transition-colors hover:text-white">
                         <span className="flex-1 break-words">{secondaryPhone} </span>    
                       </a>
                     </div>
                 </div>
               </li>
               <li>
-                <a href={emailHref} className="flex min-w-0 items-start gap-3 text-[0.92rem] text-white/55 transition-colors hover:text-white">
+                <a href={emailHref} className="flex min-w-0 items-start gap-2 text-white/55 transition-colors hover:text-white">
                   <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white/80"><MailIcon /></span>
                   <span className="min-w-0 flex-1 break-words pt-1.5 leading-relaxed">{email}</span>
                 </a>
               </li>
               <li>
-                  <div className="flex min-w-0 items-start gap-3 text-[0.92rem] text-white/55 transition-colors hover:text-white">
+                  <div className="flex min-w-0 items-start gap-2 text-white/55 transition-colors hover:text-white">
                     <span className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white/80"><PinIcon /></span>
                     <span className="min-w-0 flex-1 break-words pt-1.5 leading-relaxed">{address}</span>
                   </div>
