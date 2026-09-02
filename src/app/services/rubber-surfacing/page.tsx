@@ -104,7 +104,7 @@ const finishes = [
     id: "borders",
     name: "Borders",
     detail: "Contrasting edge bands and accent borders that define walkways, pool perimeters, and seating zones with clean visual separation.",
-    image: "/images/services/rubber-surfacing-border.webp",
+    image: "/images/services/rubber-surfacing-border-1.webp",
   },
   {
     id: "poured",

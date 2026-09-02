@@ -118,8 +118,8 @@ const finishes = [
 const faqs = serviceFaqs.commercial;
 
 const idealFor = [
-  "Wherehouse Floors",
-  "Commercial kitchen",
+  "Warehouse Floors",
+  "Commercial Kitchen",
   "Auto Repair Workshops",
   "Showrooms",
   "HealthCare & Laboratories",
