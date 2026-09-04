@@ -109,10 +109,10 @@ const finishes = [
     image: "/images/services/service-garage.webp",
   },
   {
-    id: "metallic",
-    name: "Metallic Accent",
-    detail: "Liquid depth for collector bays that deserve a feature floor.",
-    image: "/images/services/service-metallic.webp",
+    id: "blend",
+    name: "Blend System",
+    detail: "Blend system for collector bays that deserve a feature floor.",
+    image: "/images/services/garage.webp",
   },
 ];
 
@@ -260,7 +260,7 @@ export default function GarageFloorsPage() {
             <div className="relative order-1 lg:order-2 lg:col-span-7">
               <div className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] sm:rounded-[2.1rem]">
                 <Image
-                  src="/images/services/service-garage.webp"
+                  src="/images/services/garage-1.webp"
                   alt="Finished garage epoxy floor with luxury vehicle"
                   width={800}
                   height={800}
@@ -272,7 +272,7 @@ export default function GarageFloorsPage() {
               <div className="absolute -bottom-5 -left-3 hidden w-[46%] overflow-hidden rounded-[1.35rem] shadow-xl sm:block lg:-left-8 lg:-bottom-7">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/services/service_garage.webp"
+                    src="/images/services/service-garage.webp"
                     alt="Wide residential epoxy flooring detail"
                     width={400}
                     height={400}

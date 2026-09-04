@@ -122,7 +122,11 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <strong className="block text-gray-800">Hours:</strong>
-                    <div>{hours}, {weekends}</div>
+                    <div className="flex flex-col">
+                      <span>{hours} </span>
+                      <span>{weekends}</span>
+                      <span>Sunday: Closed</span>
+                    </div>
                   </div>  
                 </li>
               </ul>

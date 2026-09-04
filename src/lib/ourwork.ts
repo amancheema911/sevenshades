@@ -44,29 +44,37 @@ export const featuredOurWorkIds = [
 ];
 
 export const ourWorkItems: OurWorkItem[] = [
-  // {
-  //   id: "garage-showroom",
-  //   title: "Collector Garage",
-  //   category: "Garage Floors",
-  //   location: "Private Residence",
-  //   image: "/images/services/garage-1.webp",
-  //   imageAlt: "Luxury car on a finished garage epoxy floor",
-  //   description: "Showroom-grade garage flooring built for collectors — durable coating, high-gloss finish, and a surface that stays easy to clean through seasons of driving.",
-  //   images: [
-  //     {
-  //       src: "/images/services/garage.webp",
-  //       alt: "Luxury car on a finished garage epoxy floor",
-  //     },
-  //     {
-  //       src: "/images/services/garage-2.webp",
-  //       alt: "Wide view of the completed garage floor",
-  //     },
-  //     {
-  //       src: "/images/services/garage-3.webp",
-  //       alt: "Smooth garage floor under natural light",
-  //     },
-  //   ],
-  // },
+  {
+    id: "garage-showroom",
+    title: "Collector Garage",
+    category: "Garage Floors",
+    location: "Private Residence",
+    image: "/images/services/garage-1.webp",
+    imageAlt: "Luxury car on a finished garage epoxy floor",
+    description: "Showroom-grade garage flooring built for collectors — durable coating, high-gloss finish, and a surface that stays easy to clean through seasons of driving.",
+    images: [
+      {
+        src: "/images/services/garage-1.webp",
+        alt: "Luxury car on a finished garage epoxy floor",
+      },
+      {
+        src: "/images/services/garage-2.webp",
+        alt: "Wide view of the completed garage floor",
+      },
+      {
+        src: "/images/services/garage-3.webp",
+        alt: "Smooth garage floor under natural light",
+      },
+      {
+        src: "/images/services/garage-4.webp",
+        alt: "Smooth garage floor under natural light",
+      },
+      {
+        src: "/images/services/garage-5.webp",
+        alt: "Smooth garage floor under natural light",
+      },
+    ],
+  },
   {
     id: "residential-living",
     title: "Open-Concept Home",
@@ -106,6 +114,33 @@ export const ourWorkItems: OurWorkItem[] = [
       {
         src: "/images/services/metalic-floor-3.webp",
         alt: "Lounge seating over metallic epoxy",
+      },
+    ],
+  },
+  {
+    id: "solid-epoxy",
+    title: "Solid Epoxy",
+    category: "Solid Epoxy",
+    location: "Private Residence",
+    image: "/images/services/solid-epoxy-3.webp",
+    imageAlt: "Solid epoxy flooring with refined aggregate texture",
+    description: "Solid epoxy flooring with durable textured grip — solid epoxy that handles wet boots and outdoor transitions while keeping a refined, architectural feel.",
+    images: [
+      {
+        src: "/images/services/solid-epoxy-1.webp",
+        alt: "Solid epoxy flooring with refined aggregate texture",
+      },
+      {
+        src: "/images/services/solid-epoxy-2.webp",
+        alt: "Entry path with solid epoxy finish",
+      },
+      {
+        src: "/images/services/solid-epoxy-3.webp",
+        alt: "Seamless solid epoxy transition at the doorway",
+      },
+      {
+        src: "/images/services/solid-epoxy-4.webp",
+        alt: "Seamless solid epoxy transition at the doorway",
       },
     ],
   },

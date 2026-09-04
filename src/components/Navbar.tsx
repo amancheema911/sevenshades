@@ -30,7 +30,7 @@ const MOBILE_SERVICE_LINKS = [
   ...SERVICE_LINKS,
 ] as const;
 
-const { phone, hours, logo } = contactInfo;
+const { phone, hours, logo, weekends } = contactInfo;
 const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`;
 
 function PhoneIcon() {
@@ -425,7 +425,8 @@ export default function Navbar() {
             <span className="flex min-w-0 flex-col leading-tight">
               <span className="text-[0.75rem] font-medium text-white">Call Us Today</span>
               <span className="truncate text-sm font-bold text-white">{phone}</span>
-              <span className="text-[0.7rem] font-medium text-white/80">{hours}</span>
+              <span className="text-[0.7rem] font-medium text-white/80">{hours} </span> 
+              <span className="text-[0.7rem] font-medium text-white/80">{weekends}</span>
             </span>
           </a>
 

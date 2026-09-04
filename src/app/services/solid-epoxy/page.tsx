@@ -98,19 +98,19 @@ const finishes = [
     id: "gloss",
     name: "High Gloss",
     detail: "Reflective, showroom-ready clarity that amplifies light and makes color feel bold and continuous.",
-    image: "/images/services/service-commercial.webp",
+    image: "/images/services/solid-epoxy-1.webp",
   },
   {
     id: "satin",
     name: "Satin Clear",
     detail: "A softer sheen with the same durable build — ideal when you want polished without high glare.",
-    image: "/images/services/service-garage.webp",
+    image: "/images/services/solid-epoxy-3.webp",
   },
   {
     id: "texture",
     name: "Light Texture",
     detail: "Subtle grip added to a solid color base for wet entries without switching to a full flake system.",
-    image: "/images/services/service-industrial.webp",
+    image: "/images/services/solid-epoxy-4.webp",
   },
 ];
 
@@ -271,7 +271,7 @@ export default function SolidEpoxyPage() {
               <div className="absolute -bottom-5 -left-3 hidden w-[46%] overflow-hidden rounded-[1.35rem] shadow-xl sm:block lg:-left-8 lg:-bottom-7">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/services/service-garage.webp"
+                    src="/images/services/solid-epoxy-3.webp"
                     alt="Solid epoxy garage flooring detail"
                     width={400}
                     height={400}

@@ -1,6 +1,6 @@
 export const APP_NAME = "Seven Shades";
 export const BASE_URL = "https://sevenshades.vercel.app";
-//export const BASE_URL = "http://localhost:3002";
+//export const BASE_URL = "http://localhost:3001";
 
 export const contactInfo = {
     logo: `/saven-shade-logo.webp`,
@@ -9,7 +9,7 @@ export const contactInfo = {
     email: "sevenshadesepoxy@gmail.com",
     address: "23-17528 60 Avenue, Surrey, BC, Canada, V3S 1T8",
     hours: "Mon - Fri: 9AM - 7PM",
-    weekends: "Sat - Sun: 10AM - 4PM",
+    weekends: "Sat: 10AM - 4PM",
     DEFAULT_IMAGE: "/images/hero-epoxy-floor-1.2.1.webp",
 };
 

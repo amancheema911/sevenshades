@@ -428,11 +428,11 @@ export default function OurWorkClient() {
             </div>
           </div>
 
-          <ul className="mt-10 columns-1 gap-4 sm:mt-12 sm:columns-2 sm:gap-5 lg:columns-3 lg:gap-6">
+          <ul className="mt-10 columns-1 gap-4 sm:mt-12 sm:columns-2 lg:columns-3 xl:columns-4">
             {filtered.map((item, index) => {
               const tall = index % 5 === 1 || index % 5 === 3;
               return (
-                <li key={`${category}-${item.id}`} className="mb-4 break-inside-avoid sm:mb-5 lg:mb-6">
+                <li key={`${category}-${item.id}`} className="mb-4 break-inside-avoid">
                   <button type="button" onClick={() => openAt(index)} className="group relative block w-full overflow-hidden rounded-[1.35rem] text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--brand-color)] sm:rounded-[1.5rem]" aria-label={`Open ${item.title} preview`}>
                     <div className={`relative overflow-hidden ${ tall ? "aspect-[3/4]" : "aspect-[4/3]" }`}>
                       <Image
@@ -445,9 +445,9 @@ export default function OurWorkClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-95"/>
                       <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 sm:p-5">
                         <div className="space-y-1">
-                          <div className="text-white/70 uppercase">{item.category}</div>
+                          <div className="text-xs text-white/70 uppercase">{item.category}</div>
                           <div className="text-lg font-bold text-white">{item.title}</div>
-                          <div className="text-white/70">{item.location}</div>
+                          <div className="text-sm text-white/70">{item.location}</div>
                         </div>
                         <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white backdrop-blur-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#0B1120]">
                           <ExpandIcon />
