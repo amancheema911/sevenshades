@@ -84,7 +84,7 @@ export default function Button({
   const classes = cx(
     "group inline-flex sm:gap-2.5 items-center rounded-xl sm:rounded-full",
     showIcon ? "justify-center sm:justify-between" : "justify-center",
-    "bg-[var(--brand-color)] text-white text-sm",
+    "bg-[var(--brand-color)] text-white text-sm font-medium",
     "shadow-md",
     "py-3 pr-6 pl-6 sm:pr-1.5 sm:pl-7 sm:py-1.5",
     "transition-[transform,filter,box-shadow] duration-300",

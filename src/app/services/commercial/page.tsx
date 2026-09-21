@@ -12,27 +12,27 @@ import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Commercial Epoxy Flooring Installation | Seven Shades",
-  description: "Professional commercial epoxy flooring by Seven Shades. High-traffic systems for retail, offices, restaurants, and showrooms — durable, cleanable, and built for business hours.",
+  title: "Commercial Epoxy Flooring Surrey, BC | Seven Shades",
+  description: "Durable commercial epoxy floors for shops, warehouses, and workspaces in Surrey, BC. Built for heavy traffic and easier maintenance. Request a quote!",
   keywords: ["commercial epoxy flooring", "retail epoxy floor coating", "commercial floor installation", "high traffic epoxy flooring", "business epoxy floors"],
   alternates: { 
     canonical: `${BASE_URL}/services/commercial`,
   },
   openGraph: {
-    title: "Commercial Epoxy Flooring Installation | Seven Shades",
-    description: "Professional commercial epoxy flooring by Seven Shades. High-traffic systems for retail, offices, restaurants, and showrooms — durable, cleanable, and built for business hours.",
+    title: "Commercial Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Durable commercial epoxy floors for shops, warehouses, and workspaces in Surrey, BC. Built for heavy traffic and easier maintenance. Request a quote!",
     type: "website",
     images: [
       {
         url: BASE_URL + "/images/services/service-commercial.webp",
-        alt: "Bright commercial interior with epoxy flooring",
+        alt: "Commercial Epoxy Flooring Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commercial Epoxy Flooring Installation | Seven Shades",
-    description: "Professional commercial epoxy flooring by Seven Shades. High-traffic systems for retail, offices, restaurants, and showrooms — durable, cleanable, and built for business hours.",
+    title: "Commercial Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Durable commercial epoxy floors for shops, warehouses, and workspaces in Surrey, BC. Built for heavy traffic and easier maintenance. Request a quote!",
     images: [BASE_URL + "/images/services/service-commercial.webp"],
   },
 };

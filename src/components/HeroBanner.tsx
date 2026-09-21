@@ -77,7 +77,7 @@ export default function HeroBanner() {
                     Get A Free On-Site Estimate
                   </Button>
 
-                  <Link href="/our-work" className="group inline-flex items-center justify-center gap-0 rounded-xl border border-white/75 bg-transparent py-3 pr-6 pl-6 text-sm text-white transition-colors hover:border-white hover:bg-white/10 max-[450px]:w-full sm:justify-between sm:gap-2.5 sm:rounded-full sm:pr-1.5 sm:pl-7 sm:py-1.5">
+                  <Link href="/our-work" className="group inline-flex items-center justify-center gap-0 rounded-xl border border-white/75 bg-transparent py-3 pr-6 pl-6 font-medium text-sm text-white transition-colors hover:border-white hover:bg-white/10 max-[450px]:w-full sm:justify-between sm:gap-2.5 sm:rounded-full sm:pr-1.5 sm:pl-7 sm:py-1.5">
                     View Our Work
                     <GalleryIcon />
                   </Link>

@@ -11,27 +11,27 @@ import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Solid Epoxy Flooring Installation | Seven Shades",
-  description: "Professional solid epoxy flooring by Seven Shades. Clean continuous color systems with gloss or satin clear — durable, easy to maintain, and built for a modern finished look.",
+  title: "Solid Color Epoxy Floors Surrey, BC | Seven Shades",
+  description: "Choose clean, seamless solid color epoxy floors for garages, homes, and commercial spaces in Surrey, BC. Durable finishes made to last. Request a quote!",
   keywords: ["solid epoxy flooring", "solid color epoxy floor", "gloss epoxy flooring", "satin epoxy floor coating", "solid epoxy installation"],
   alternates: {
     canonical: `${BASE_URL}/services/solid-epoxy`,
   },
   openGraph: {
-    title: "Solid Epoxy Flooring Installation | Seven Shades",
-    description: "Professional solid epoxy flooring by Seven Shades. Clean continuous color systems with gloss or satin clear — durable, easy to maintain, and built for a modern finished look.",
+    title: "Solid Color Epoxy Floors Surrey, BC | Seven Shades",
+    description: "Choose clean, seamless solid color epoxy floors for garages, homes, and commercial spaces in Surrey, BC. Durable finishes made to last. Request a quote!",
     type: "website",
     images: [
       {
         url: BASE_URL + "/images/services/solid-epoxy.webp",
-        alt: "Solid color epoxy flooring finish",
+        alt: "Solid Color Epoxy Floors Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solid Epoxy Flooring Installation | Seven Shades",
-    description: "Professional solid epoxy flooring by Seven Shades. Clean continuous color systems with gloss or satin clear — durable, easy to maintain, and built for a modern finished look.",
+    title: "Solid Color Epoxy Floors Surrey, BC | Seven Shades",
+    description: "Choose clean, seamless solid color epoxy floors for garages, homes, and commercial spaces in Surrey, BC. Durable finishes made to last. Request a quote!",
     images: [BASE_URL + "/images/services/solid-epoxy.webp"],
   },
 };

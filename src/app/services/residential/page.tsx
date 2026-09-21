@@ -11,27 +11,27 @@ import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Residential Epoxy Flooring Installation | Seven Shades",
-  description: "Professional residential epoxy flooring by Seven Shades. Beautiful, durable floors for garages, basements, mudrooms, and living spaces — easy to clean, stylish, and built for everyday home life.",
+  title: "Residential Epoxy Flooring Surrey, BC | Seven Shades",
+  description: "Give basements and interior concrete floors a seamless, durable finish with residential epoxy flooring in Surrey, BC. Book your free estimate today!",
   keywords: ["residential epoxy flooring", "home epoxy floors", "garage epoxy flooring", "basement epoxy floor", "residential floor coating"],
   alternates: {
     canonical: `${BASE_URL}/services/residential`,
   },
   openGraph: {
-    title: "Residential Epoxy Flooring Installation | Seven Shades",
-    description: "Professional residential epoxy flooring by Seven Shades. Beautiful, durable floors for garages, basements, mudrooms, and living spaces — easy to clean, stylish, and built for everyday home life.",
+    title: "Residential Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Give basements and interior concrete floors a seamless, durable finish with residential epoxy flooring in Surrey, BC. Book your free estimate today!",
     type: "website",
     images: [
       {
         url: BASE_URL + "/images/services/service-garage.webp",
-        alt: "Residential garage with finished epoxy flooring",
+        alt: "Residential Epoxy Flooring Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Residential Epoxy Flooring Installation | Seven Shades",
-    description: "Professional residential epoxy flooring by Seven Shades. Beautiful, durable floors for garages, basements, mudrooms, and living spaces — easy to clean, stylish, and built for everyday home life.",
+    title: "Residential Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Give basements and interior concrete floors a seamless, durable finish with residential epoxy flooring in Surrey, BC. Book your free estimate today!",
     images: [BASE_URL + "/images/services/service-residential.png"],
   },  
 };

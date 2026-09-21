@@ -12,27 +12,27 @@ import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Metallic Epoxy Flooring Installation | Seven Shades",
-  description: "Professional metallic epoxy flooring by Seven Shades. Liquid-metal depth and custom color movement for showrooms, residences, and feature spaces — stunning, durable, and sealed to last.",
+  title: "Metallic Epoxy Floors Surrey, BC | Seven Shades",
+  description: "Create a distinctive floor with metallic epoxy finishes featuring seamless patterns and lasting durability. Available across Surrey, BC. Get a free quote!",
   keywords: ["metallic epoxy flooring", "metallic epoxy floor coating", "decorative metallic floors", "luxury epoxy flooring", "metallic epoxy installation"],
   alternates: {
     canonical: `${BASE_URL}/services/metallic-epoxy`,
   },
   openGraph: {
-    title: "Metallic Epoxy Flooring Installation | Seven Shades",
-    description: "Professional metallic epoxy flooring by Seven Shades. Liquid-metal depth and custom color movement for showrooms, residences, and feature spaces — stunning, durable, and sealed to last.",
+    title: "Metallic Epoxy Floors Surrey, BC | Seven Shades",
+    description: "Create a distinctive floor with metallic epoxy finishes featuring seamless patterns and lasting durability. Available across Surrey, BC. Get a free quote!",
     type: "website",
     images: [
       {
         url: BASE_URL + "/images/services/service-metallic.webp",
-        alt: "Close-up of blue and silver metallic epoxy floor",
+        alt: "Metallic Epoxy Floors Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Metallic Epoxy Flooring Installation | Seven Shades",
-    description: "Professional metallic epoxy flooring by Seven Shades. Liquid-metal depth and custom color movement for showrooms, residences, and feature spaces — stunning, durable, and sealed to last.",
+    title: "Metallic Epoxy Floors Surrey, BC | Seven Shades",
+    description: "Create a distinctive floor with metallic epoxy finishes featuring seamless patterns and lasting durability. Available across Surrey, BC. Get a free quote!",
     images: [BASE_URL + "/images/services/service-metallic.webp"],
   },
 };

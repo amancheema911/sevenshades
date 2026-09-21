@@ -96,7 +96,7 @@ export default function CallToAction() {
                 <Button href="/contact-us" className="max-[450px]:w-full">Get Free Quote</Button>
                 <Link
                   href="/contact-us"
-                  className="group inline-flex items-center justify-center gap-0 rounded-xl border border-white/75 bg-transparent py-3 pr-6 pl-6 text-sm text-white transition-colors hover:border-white hover:bg-white/10 max-[450px]:w-full sm:justify-between sm:gap-2.5 sm:rounded-full sm:pr-1.5 sm:pl-7 sm:py-1.5"
+                  className="group inline-flex items-center justify-center gap-0 rounded-xl border border-white/75 bg-transparent py-3 pr-6 pl-6 font-medium text-sm text-white transition-colors hover:border-white hover:bg-white/10 max-[450px]:w-full sm:justify-between sm:gap-2.5 sm:rounded-full sm:pr-1.5 sm:pl-7 sm:py-1.5"
                 >
                   Schedule Consultation
                   <CalendarIcon />

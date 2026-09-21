@@ -8,15 +8,15 @@ import Heading from "@/components/Heading";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Epoxy Flooring Services | Seven Shades",
-  description: "Browse Seven Shades epoxy systems for every space — garage, commercial, residential, metallic, solid, stone epoxy, and rubber surfacing. Precision install, built to last.",
+  title: "Premium Epoxy Floor Coating Services Surrey | Seven Shades",
+  description: "Find professional epoxy floor coating and installation services in Surrey, BC, with solutions for garages, homes, and commercial spaces. Request a quote!",
   keywords: ["epoxy flooring services", "garage epoxy flooring", "commercial epoxy floors", "residential epoxy flooring", "metallic epoxy flooring", "solid epoxy flooring", "stone epoxy flooring", "rubber surfacing" ],
   alternates: {
     canonical: `${BASE_URL}/services`,
   },
   openGraph: {
-    title: "Epoxy Flooring Services | Seven Shades",
-    description: "High-performance epoxy systems engineered for durability — from garages to commercial spaces, specified for traffic, chemicals, and the look you want.",
+    title: "Premium Epoxy Floor Coating Services Surrey | Seven Shades",
+    description: "Find professional epoxy floor coating and installation services in Surrey, BC, with solutions for garages, homes, and commercial spaces. Request a quote!",
     type: "website",
     images: [
       {
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Epoxy Flooring Services | Seven Shades",
-    description: "Browse Seven Shades epoxy systems for every space — garage, commercial, residential, metallic, solid, stone epoxy, and rubber surfacing. Precision install, built to last.",
+    title: "Premium Epoxy Floor Coating Services Surrey | Seven Shades",
+    description: "Find professional epoxy floor coating and installation services in Surrey, BC, with solutions for garages, homes, and commercial spaces. Request a quote!",
     images: [BASE_URL + "/images/services/service-garage.webp"],
   },
 };

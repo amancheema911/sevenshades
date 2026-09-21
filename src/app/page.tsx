@@ -13,27 +13,27 @@ import { counterItems } from "@/lib/counters";
 import { BASE_URL, contactInfo } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Seven Shades | Premium Epoxy Solutions",
-  description: "Premium epoxy flooring in Surrey, BC — durable, beautiful garage, residential, and commercial floors installed by local experts. Free quotes.",
+  title: "Epoxy Flooring Surrey, BC | Seven Shades",
+  description: "Hire a reliable contractor for professional epoxy floor installation in Surrey, BC. Custom finishes for homes and businesses. Get a free quote today!",
   keywords: [ "epoxy flooring Surrey", "garage epoxy flooring", "commercial epoxy floors", "residential epoxy flooring", "premium epoxy solutions", "metallic epoxy flooring" ],
   alternates: { 
     canonical: BASE_URL
   },
   openGraph: {
-    title: "Seven Shades | Premium Epoxy Solutions",
-    description: "Transform your garage, basement, or commercial space with high-performance epoxy flooring installed by local experts in Surrey, BC.",
+    title: "Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Hire a reliable contractor for professional epoxy floor installation in Surrey, BC. Custom finishes for homes and businesses. Get a free quote today!",
     type: "website",
     images: [
       {
         url: BASE_URL + contactInfo.DEFAULT_IMAGE,
-        alt: "Premium epoxy garage floor with reflective flake finish",
+        alt: "Epoxy Flooring Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Seven Shades | Premium Epoxy Solutions",
-    description: "Premium epoxy flooring in Surrey, BC — durable, beautiful garage, residential, and commercial floors installed by local experts. Free quotes.",
+    title: "Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Hire a reliable contractor for professional epoxy floor installation in Surrey, BC. Custom finishes for homes and businesses. Get a free quote today!",
     images: [BASE_URL + contactInfo.DEFAULT_IMAGE],
   },
 };

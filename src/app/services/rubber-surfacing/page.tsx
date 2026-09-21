@@ -11,27 +11,27 @@ import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Rubber Surfacing Installation | Seven Shades",
-  description: "Professional rubber surfacing by Seven Shades. Soft, durable, slip-resistant floors for gyms, play areas, daycare spaces, and recreational zones — impact absorbing and built for high activity.",
+  title: "Rubber Surfacing Surrey, BC | Seven Shades",
+  description: "Discover durable rubber surfacing for indoor and outdoor spaces in Surrey, BC, designed for comfort, function, and lasting performance. Get a free quote!",
   keywords: ["rubber surfacing", "rubber flooring installation", "gym rubber floor", "playground rubber surface", "impact absorbing rubber flooring" ],
   alternates: {
     canonical: `${BASE_URL}/services/rubber-surfacing`,
   },
   openGraph: {
-    title: "Rubber Surfacing Installation | Seven Shades",
-    description: "Professional rubber surfacing by Seven Shades. Soft, durable, slip-resistant floors for gyms, play areas, daycare spaces, and recreational zones — impact absorbing and built for high activity.",
+    title: "Rubber Surfacing Surrey, BC | Seven Shades",
+    description: "Discover durable rubber surfacing for indoor and outdoor spaces in Surrey, BC, designed for comfort, function, and lasting performance. Get a free quote!",
     type: "website",
     images: [
       {
         url: BASE_URL + "/images/services/rubber-surfacing.webp",
-        alt: "Rubber surfacing for recreation and activity spaces",
+        alt: "Rubber Surfacing Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rubber Surfacing Installation | Seven Shades",
-    description: "Professional rubber surfacing by Seven Shades. Soft, durable, slip-resistant floors for gyms, play areas, daycare spaces, and recreational zones — impact absorbing and built for high activity.",
+    title: "Rubber Surfacing Surrey, BC | Seven Shades",
+    description: "Discover durable rubber surfacing for indoor and outdoor spaces in Surrey, BC, designed for comfort, function, and lasting performance. Get a free quote!",
     images: [BASE_URL + "/images/services/rubber-surfacing.webp"],
   },
 };

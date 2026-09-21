@@ -34,11 +34,11 @@ function TestimonialCard({ item }: { item: Testimonial }) {
       </div>
       <p>{item.quote}</p>
       <div className="mt-6 flex items-center gap-3">
-        <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{ backgroundColor: item.avatarColor }} aria-hidden="true">
+        <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white" style={{ backgroundColor: item.avatarColor }} aria-hidden="true">
           {item.initials}
         </span>
         <div>
-          <div className="text-sm font-bold text-[var(--black)]">{item.name}</div>
+          <div className="text-sm font-semibold text-[var(--black)]">{item.name}</div>
           <p>{item.role}</p>
         </div>
       </div>
@@ -133,7 +133,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-2" role="tablist" aria-label="Testimonials slides">
+        <div className="mt-6 flex items-center justify-center gap-3" role="tablist" aria-label="Testimonials slides">
           {Array.from({ length: maxIndex + 1 }, (_, index) => {
             const active = index === activeIndex;
             return (
@@ -144,7 +144,7 @@ export default function Testimonials() {
                 aria-selected={active}
                 aria-label={`Go to testimonials slide ${index + 1}`}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 min-w-2 min-h-2 cursor-pointer rounded-full ${
+                className={`w-3 h-3 min-w-3 min-h-3 cursor-pointer rounded-full ${
                   active
                     ? "bg-[var(--brand-color)]"
                     : "bg-black/15 hover:bg-black/25"

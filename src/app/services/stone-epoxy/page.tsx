@@ -11,27 +11,27 @@ import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Stone Epoxy Flooring Installation | Seven Shades",
-  description: "Professional stone epoxy flooring by Seven Shades. Natural stone-look systems with durable aggregate texture — refined appearance, strong grip, and built for residential and commercial spaces.",
+  title: "Stone Epoxy Flooring Surrey, BC | Seven Shades",
+  description: "Add texture and character with durable stone epoxy flooring for garages, patios, and concrete spaces in Surrey, BC. Explore finishes and get a free quote!",
   keywords: ["stone epoxy flooring", "stone look epoxy floor", "epoxy stone flooring", "aggregate epoxy floor", "stone epoxy installation"],
   alternates: {
     canonical: `${BASE_URL}/services/stone-epoxy`,
   },
   openGraph: {
-    title: "Stone Epoxy Flooring Installation | Seven Shades",
-    description: "Professional stone epoxy flooring by Seven Shades. Natural stone-look systems with durable aggregate texture — refined appearance, strong grip, and built for residential and commercial spaces.",
+    title: "Stone Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Add texture and character with durable stone epoxy flooring for garages, patios, and concrete spaces in Surrey, BC. Explore finishes and get a free quote!",
     type: "website",
     images: [
       {
         url: BASE_URL + "/images/services/stone-epoxy.webp",
-        alt: "Stone epoxy flooring with refined aggregate texture",
+        alt: "Stone Epoxy Flooring Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stone Epoxy Flooring Installation | Seven Shades",
-    description: "Professional stone epoxy flooring by Seven Shades. Natural stone-look systems with durable aggregate texture — refined appearance, strong grip, and built for residential and commercial spaces.",
+    title: "Stone Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Add texture and character with durable stone epoxy flooring for garages, patios, and concrete spaces in Surrey, BC. Explore finishes and get a free quote!",
     images: [BASE_URL + "/images/services/stone-epoxy.webp"],
   },
 };

@@ -13,27 +13,27 @@ import { serviceFaqs } from "@/lib/service-faqs";
 import { BASE_URL } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Garage Epoxy Flooring Installation | Seven Shades",
-  description: "Professional garage epoxy flooring by Seven Shades. Hot-tire resistant, easy to clean, UV-stable showroom finishes for residential and collector garages. Free quotes.",
+  title: "Epoxy Garage Floors Surrey, BC | Seven Shades",
+  description: "Upgrade your garage with a seamless, durable epoxy garage floor built for daily use, easy cleaning, and lasting style. Get your free estimate in Surrey!",
   keywords: ["garage epoxy flooring", "garage floor coating", "epoxy garage floor installation", "hot tire resistant epoxy", "residential garage floors"],
   alternates: { 
     canonical: `${BASE_URL}/services/garage-floors` 
   },
   openGraph: {
-    title: "Garage Epoxy Flooring Installation | Seven Shades",
-    description: "Professional garage epoxy flooring by Seven Shades. Hot-tire resistant, easy to clean, UV-stable showroom finishes for residential and collector garages. Free quotes.",
+    title: "Epoxy Garage Floors Surrey, BC | Seven Shades",
+    description: "Upgrade your garage with a seamless, durable epoxy garage floor built for daily use, easy cleaning, and lasting style. Get your free estimate in Surrey!",
     type: "website",
     images: [
       {
         url: BASE_URL + "/images/services/service-garage.webp",
-        alt: "Luxury car on a finished garage epoxy floor",
+        alt: "Epoxy Garage Floors Surrey, BC | Seven Shades",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Garage Epoxy Flooring Installation | Seven Shades",
-    description: "Professional garage epoxy flooring by Seven Shades. Hot-tire resistant, easy to clean, UV-stable showroom finishes for residential and collector garages. Free quotes.",
+    title: "Epoxy Garage Floors Surrey, BC | Seven Shades",
+    description: "Upgrade your garage with a seamless, durable epoxy garage floor built for daily use, easy cleaning, and lasting style. Get your free estimate in Surrey!",
     images: [BASE_URL + "/images/services/service-garage.webp"],
   },
 };

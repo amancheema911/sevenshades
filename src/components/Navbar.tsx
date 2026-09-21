@@ -181,13 +181,14 @@ export default function Navbar() {
             <Image src={logo} alt="Seven Shades" width={250} height={250} />
           </Link>
 
-          <ul className="hidden items-center gap-1 xl:flex">
+          <ul role="navigation" className="hidden items-center gap-1 xl:flex">
             {NAV_LINKS.map((link) => {
               const active = isActive(link.href);
 
               if ("hasDropdown" in link && link.hasDropdown) {
                 return (
                   <li
+                    role="menuitem"
                     key={link.href}
                     ref={desktopServicesRef}
                     className="group relative"
@@ -195,6 +196,7 @@ export default function Navbar() {
                     onMouseLeave={() => setDesktopServicesOpen(false)}
                   >
                     <Link
+                      role="link"
                       href={link.href}
                       className={`relative inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors ${
                         servicesActive
@@ -219,7 +221,6 @@ export default function Navbar() {
 
                     <div
                       id={servicesDropdownId}
-                      role="menu"
                       aria-label="Services"
                       className={`absolute top-full left-0 z-50 min-w-[240px] pt-2 transition-all duration-200 ${
                         desktopServicesOpen
@@ -228,14 +229,14 @@ export default function Navbar() {
                       }`}
                     >
                       <div className="overflow-hidden rounded-xl border border-white/10 bg-[var(--black)] shadow-xl shadow-black/40">
-                        <ul className="py-2">
+                        <ul className="py-2" role="menu">
                           {SERVICE_LINKS.map((service) => {
                             const serviceActive = pathname === service.href;
                             return (
-                              <li key={service.href} role="none">
+                              <li key={service.href} role="menuitem">
                                 <Link
+                                  role="link"
                                   href={service.href}
-                                  role="menuitem"
                                   className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
                                     serviceActive
                                       ? "bg-white/5 text-[var(--brand-color)]"
@@ -346,14 +347,15 @@ export default function Navbar() {
           </button>
         </div>
 
-        <ul className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
+        <ul role="navigation" className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
           {NAV_LINKS.map((link) => {
             const active = isActive(link.href);
 
             if ("hasDropdown" in link && link.hasDropdown) {
               return (
-                <li key={link.href}>
+                <li role="menuitem" key={link.href}>
                   <button
+                    role="button"
                     type="button"
                     className={`flex w-full items-center justify-between rounded-lg px-4 py-3.5 text-left text-base font-medium transition-colors ${
                       servicesActive
@@ -378,8 +380,9 @@ export default function Navbar() {
                       {MOBILE_SERVICE_LINKS.map((service) => {
                         const serviceActive = pathname === service.href;
                         return (
-                          <li key={service.href}>
+                          <li role="menuitem" key={service.href}>
                             <Link
+                              role="link"
                               href={service.href}
                               className={`block rounded-lg py-2.5 pr-4 pl-8 text-sm font-medium transition-colors ${
                                 serviceActive

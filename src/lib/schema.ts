@@ -187,8 +187,8 @@ const homeCrumbs: Breadcrumb[] = [{ name: "Home", path: "/" }];
 
 const homeSchema = createPageGraph({
   "path": "/",
-  "name": "Seven Shades | Premium Epoxy Solutions",
-  "description": "Transform your garage, basement, or commercial space with high-performance epoxy flooring installed by local experts in Surrey, BC.",
+  "name": "Epoxy Flooring Surrey, BC | Seven Shades",
+  "description": "Hire a reliable contractor for professional epoxy floor installation in Surrey, BC. Custom finishes for homes and businesses. Get a free quote today!",
   "mainEntityId": `${BASE_URL}/#services`,
   "breadcrumbs": homeCrumbs,
   "extraNodes": [
@@ -209,32 +209,32 @@ const homeSchema = createPageGraph({
 
 const serviceSeo: Record<string, { title: string; description: string }> = {
   "garage-floors": {
-    title: "Garage Epoxy Flooring Installation | Seven Shades",
-    description: "Professional garage epoxy flooring by Seven Shades. Hot-tire resistant, easy to clean, UV-stable showroom finishes for residential and collector garages. Free quotes.",
+    title: "Epoxy Garage Floors Surrey, BC | Seven Shades",
+    description: "Upgrade your garage with a seamless, durable epoxy garage floor built for daily use, easy cleaning, and lasting style. Get your free estimate in Surrey!",
   },
   commercial: {
-    title: "Commercial Epoxy Flooring Installation | Seven Shades",
-    description: "Professional commercial epoxy flooring by Seven Shades. High-traffic systems for retail, offices, restaurants, and showrooms — durable, cleanable, and built for business hours.",
+    title: "Commercial Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Durable commercial epoxy floors for shops, warehouses, and workspaces in Surrey, BC. Built for heavy traffic and easier maintenance. Request a quote!",
   },
   residential: {
-    title: "Residential Epoxy Flooring Installation | Seven Shades",
-    description: "Professional residential epoxy flooring by Seven Shades. Beautiful, durable floors for garages, basements, mudrooms, and living spaces — easy to clean, stylish, and built for everyday home life.",
+    title: "Residential Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Give basements and interior concrete floors a seamless, durable finish with residential epoxy flooring in Surrey, BC. Book your free estimate today!",
   },
   "metallic-epoxy": {
-    title: "Metallic Epoxy Flooring Installation | Seven Shades",
-    description: "Professional metallic epoxy flooring by Seven Shades. Liquid-metal depth and custom color movement for showrooms, residences, and feature spaces — stunning, durable, and sealed to last.",
+    title: "Metallic Epoxy Floors Surrey, BC | Seven Shades",
+    description: "Create a distinctive floor with metallic epoxy finishes featuring seamless patterns and lasting durability. Available across Surrey, BC. Get a free quote!",
   },
   "solid-epoxy": {
-    title: "Solid Epoxy Flooring Installation | Seven Shades",
-    description: "Professional solid epoxy flooring by Seven Shades. Clean continuous color systems with gloss or satin clear — durable, easy to maintain, and built for a modern finished look.",
+    title: "Solid Color Epoxy Floors Surrey, BC | Seven Shades",
+    description: "Choose clean, seamless solid color epoxy floors for garages, homes, and commercial spaces in Surrey, BC. Durable finishes made to last. Request a quote!",
   },
   "stone-epoxy": {
-    title: "Stone Epoxy Flooring Installation | Seven Shades",
-    description: "Professional stone epoxy flooring by Seven Shades. Natural stone-look systems with durable aggregate texture — refined appearance, strong grip, and built for residential and commercial spaces.",
+    title: "Stone Epoxy Flooring Surrey, BC | Seven Shades",
+    description: "Add texture and character with durable stone epoxy flooring for garages, patios, and concrete spaces in Surrey, BC. Explore finishes and get a free quote!",
   },
   "rubber-surfacing": {
-    title: "Rubber Surfacing Installation | Seven Shades",
-    description: "Professional rubber surfacing by Seven Shades. Soft, durable, slip-resistant floors for gyms, play areas, daycare spaces, and recreational zones — impact absorbing and built for high activity.",
+    title: "Rubber Surfacing Surrey, BC | Seven Shades",
+    description: "Discover durable rubber surfacing for indoor and outdoor spaces in Surrey, BC, designed for comfort, function, and lasting performance. Get a free quote!",
   },
 };
 
@@ -284,8 +284,8 @@ const staticPages: Record<string, PageSchemaConfig> = {
   "/services": {
     "type": "CollectionPage",
     "path": "/services",
-    "name": "Epoxy Flooring Services | Seven Shades",
-    "description": "Browse Seven Shades epoxy systems for every space — garage, commercial, residential, metallic, solid, stone epoxy, and rubber surfacing. Precision install, built to last.",
+    "name": "Premium Epoxy Floor Coating Services Surrey | Seven Shades",
+    "description": "Find professional epoxy floor coating and installation services in Surrey, BC, with solutions for garages, homes, and commercial spaces. Request a quote!",
     "image": "/images/services/service-garage.webp",
     "mainEntityId": `${BASE_URL}/services#service-list`,
     "breadcrumbs": [
